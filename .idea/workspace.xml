@@ -133,7 +133,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -145,11 +145,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\cars\resources\views" />
       <recent name="C:\xampp\htdocs\cars\app\Http" />
       <recent name="C:\xampp\htdocs\cars\public" />
       <recent name="C:\xampp\htdocs\cars\app\Http\Controllers" />
       <recent name="C:\xampp\htdocs\cars\database" />
-      <recent name="C:\xampp\htdocs\cars\app" />
     </key>
   </component>
   <component name="RunManager">
@@ -167,7 +167,7 @@
       <option name="presentableId" value="Default" />
       <updated>1606053632748</updated>
       <workItem from="1606053633880" duration="2293000" />
-      <workItem from="1606055982196" duration="1032000" />
+      <workItem from="1606055982196" duration="2252000" />
     </task>
     <servers />
   </component>
