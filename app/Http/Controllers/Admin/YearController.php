@@ -83,7 +83,6 @@ class YearController extends Controller
       $year->update($request->all());
       session()->flash('key', trans('admin.edited'));
       return redirect(route('years.index'));
-
   }
 
   /**
@@ -96,8 +95,6 @@ class YearController extends Controller
   {
       Year::destroy($id);
       return response()->json('delete');
-
-
   }
 
 }

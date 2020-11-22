@@ -8,7 +8,7 @@
     <div class="box">
     @include('layouts.partials.validation-errors')
     <!-- form start -->
-        {!! Form::model($partner,[
+        {!! Form::model($year,[
                                 'action'=>'Admin\YearController@store',
                                 'id'=>'myForm',
                                 'role'=>'form',

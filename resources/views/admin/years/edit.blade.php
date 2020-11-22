@@ -3,7 +3,6 @@
             'page_description'       => trans('admin.years'),
 
                                 ])
-@inject('year', 'App\Models\Year')
 @section('content')
     <div class="box">
     @include('layouts.partials.validation-errors')

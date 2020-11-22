@@ -24,7 +24,7 @@
                         </thead>
                         <tbody>
                             @foreach($years as $ye)
-                                <tr id="removable{{$year->id}}">
+                                <tr id="removable{{$ye->id}}">
                                     <td class="text-center">{{$loop->iteration}}</td>
                                     <td class="text-center">{{$ye->year}}</td>
                                     <td class="text-center"><a href="{{route('years.edit', $ye->id)}}"
@@ -37,7 +37,7 @@
                                                 class="fa fa-trash-o"></i></button>
                                     </td>
                                 </tr>
-                        @endforeach
+                            @endforeach
                         </tbody>
                     </table>
                 </div>

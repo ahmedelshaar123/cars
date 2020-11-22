@@ -29,6 +29,8 @@ Route::group(
             Route::resource('contacts', 'ContactController');
             //years route
             Route::resource('years', 'YearController');
+            //brands route
+            Route::resource('brands', 'BrandController');
 
         });
     });
