@@ -16,22 +16,22 @@
                             <th class="text-center">{{trans('admin.message')}}</th>
                             <th class="text-center">{{trans('admin.delete')}}</th>
                         </thead>
-                        <tbody id="ajax_search">
-                        @foreach($contacts as $contact)
-                            <tr id="removable{{$contact->id}}">
-                                <td class="text-center">{{$loop->iteration}}</td>
-                                <td class="text-center">{{$contact->name}}</td>
-                                <td class="text-center">{{$contact->email}}</td>
-                                <td class="text-center">{{$contact->phone}}</td>
-                                <td class="text-center">{{$contact->message}}</td>
-                                <td class="text-center">
-                                    <button id="{{$contact->id}}" data-token="{{ csrf_token() }}"
-                                            data-route="{{route('contacts.destroy',$contact->id)}}"
-                                            type="button" class="destroy btn btn-danger btn-xs"><i
-                                            class="fa fa-trash-o"></i></button>
-                                </td>
-                            </tr>
-                        @endforeach
+                        <tbody>
+                            @foreach($contacts as $contact)
+                                <tr id="removable{{$contact->id}}">
+                                    <td class="text-center">{{$loop->iteration}}</td>
+                                    <td class="text-center">{{$contact->name}}</td>
+                                    <td class="text-center">{{$contact->email}}</td>
+                                    <td class="text-center">{{$contact->phone}}</td>
+                                    <td class="text-center">{{$contact->message}}</td>
+                                    <td class="text-center">
+                                        <button id="{{$contact->id}}" data-token="{{ csrf_token() }}"
+                                                data-route="{{route('contacts.destroy',$contact->id)}}"
+                                                type="button" class="destroy btn btn-danger btn-xs"><i
+                                                class="fa fa-trash-o"></i></button>
+                                    </td>
+                                </tr>
+                          @endforeach
                         </tbody>
                     </table>
                 </div>

@@ -27,6 +27,8 @@ Route::group(
         Route::middleware('auth', function () {
             //contacts route
             Route::resource('contacts', 'ContactController');
+            //years route
+            Route::resource('years', 'YearController');
 
         });
     });
