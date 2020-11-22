@@ -25,6 +25,7 @@ Route::group(
 
     Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
         Route::middleware('auth', function () {
+            //contacts route
             Route::resource('contacts', 'ContactController');
 
         });

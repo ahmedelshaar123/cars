@@ -9,12 +9,12 @@
                 <div class="table-responsive">
                     <table class="data-table table table-bordered" id="table1">
                         <thead>
-                        <th class="text-center">#</th>
-                        <th class="text-center">{{trans('admin.name')}}</th>
-                        <th class="text-center">{{trans('admin.email')}}</th>
-                        <th class="text-center">{{trans('admin.phone')}}</th>
-                        <th class="text-center">{{trans('admin.message')}}</th>
-                        <th class="text-center">{{trans('admin.delete')}}</th>
+                            <th class="text-center">#</th>
+                            <th class="text-center">{{trans('admin.name')}}</th>
+                            <th class="text-center">{{trans('admin.email')}}</th>
+                            <th class="text-center">{{trans('admin.phone')}}</th>
+                            <th class="text-center">{{trans('admin.message')}}</th>
+                            <th class="text-center">{{trans('admin.delete')}}</th>
                         </thead>
                         <tbody id="ajax_search">
                         @foreach($contacts as $contact)
@@ -35,9 +35,6 @@
                         </tbody>
                     </table>
                 </div>
-        </div>
-        <div class="text-center">
-{{--            {!! $contacts->render() !!}--}}
         </div>
         @else
             <div class="col-md-4 col-md-offset-4">

@@ -144,6 +144,9 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\cars\resources\views\layouts\admin" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\cars\resources\views" />
       <recent name="C:\xampp\htdocs\cars\app\Http" />
@@ -167,7 +170,7 @@
       <option name="presentableId" value="Default" />
       <updated>1606053632748</updated>
       <workItem from="1606053633880" duration="2293000" />
-      <workItem from="1606055982196" duration="2252000" />
+      <workItem from="1606055982196" duration="3385000" />
     </task>
     <servers />
   </component>
