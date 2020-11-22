@@ -65,8 +65,8 @@ class YearController extends Controller
    */
   public function edit($id)
   {
-      $ye = Year::findOrFail($id);
-      return view('admin.years.edit', compact('ye'));
+      $year = Year::findOrFail($id);
+      return view('admin.years.edit', compact('year'));
 
   }
 

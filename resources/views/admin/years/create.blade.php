@@ -16,7 +16,7 @@
                                 ])!!}
         <div class="box-body">
             <div class="form-group">
-                <label for="link">{{trans('admin.year')}}</label>
+                <label for="year">{{trans('admin.year')}}</label>
                 {!! Form::number('year',null,[
                     'class'=>'form-control',
                 ]) !!}
