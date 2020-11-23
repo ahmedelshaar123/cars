@@ -14,6 +14,7 @@
 Route::get('/clear', function () {
     \Illuminate\Support\Facades\Artisan::call('config:clear');
     \Illuminate\Support\Facades\Artisan::call('cache:clear');
+    dd('cleared');
 });
 
 Auth::routes();
@@ -24,7 +25,7 @@ Route::group(
     ], function () {
 
     Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
-        Route::middleware('auth', function () {
+//        Route::middleware('auth', function () {
             //contacts route
             Route::resource('contacts', 'ContactController');
             //years route
@@ -43,7 +44,7 @@ Route::group(
             Route::put('update-static-pages', 'StaticPageController@update');
 
         });
-    });
+//    });
 });
 
 
