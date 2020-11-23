@@ -33,6 +33,8 @@ Route::group(
             Route::resource('brands', 'BrandController');
             //models route
             Route::resource('models', 'ModelController');
+            //testimonials route
+            Route::resource('testimonials', 'TestimonialController');
             //settings route
             Route::get('settings', 'SettingController@index');
             Route::put('update-settings', 'SettingController@update');
