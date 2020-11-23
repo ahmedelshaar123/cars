@@ -24,7 +24,8 @@ class ModelRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|max:60'
+            'name' => 'required|max:60',
+            'brand_id' => 'required|exists:brands,id'
         ];
     }
 }

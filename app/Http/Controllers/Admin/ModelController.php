@@ -4,7 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Requests\Admin\ModelRequest;
 use App\Models\Brand;
-use App\Models\Model;
+use App\Models\Modell;
+use Mcamara\LaravelLocalization\LaravelLocalization;
 
 
 class ModelController extends Controller
@@ -17,7 +18,7 @@ class ModelController extends Controller
      */
     public function index()
     {
-        $models = Model::all();
+        $models = Modell::all();
         $brands = Brand::all();
         return view('admin.models.index', compact('models', 'brands'));
 
@@ -30,7 +31,8 @@ class ModelController extends Controller
      */
     public function create()
     {
-        $brands = Brand::all();
+        $lang = \LaravelLocalization::getCurrentLocale();
+        $brands = Brand::pluck("name_$lang",'id')->toArray();
         return view('admin.models.create', compact('brands'));
 
     }
@@ -43,7 +45,7 @@ class ModelController extends Controller
      */
     public function store(ModelRequest $request)
     {
-        Model::create($request->all());
+        Modell::create($request->all());
         session()->flash('key', trans('admin.added'));
         return redirect(route('models.index'));
 
@@ -68,7 +70,7 @@ class ModelController extends Controller
      */
     public function edit($id)
     {
-        $model = Model::findOrFail($id);
+        $model = Modell::findOrFail($id);
         $brands = Brand::all();
         return view('admin.models.edit', compact('model', 'brands'));
 
@@ -83,7 +85,7 @@ class ModelController extends Controller
      */
     public function update(ModelRequest $request, $id)
     {
-        $model = Model::findOrFail($id);
+        $model = Modell::findOrFail($id);
         $model->update($request->all());
         session()->flash('key', trans('admin.edited'));
         return redirect(route('models.index'));
@@ -97,7 +99,7 @@ class ModelController extends Controller
      */
     public function destroy($id)
     {
-        Model::destroy($id);
+        Modell::destroy($id);
         return response()->json('delete');
     }
 

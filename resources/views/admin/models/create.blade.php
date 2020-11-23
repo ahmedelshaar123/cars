@@ -3,7 +3,7 @@
             'page_description'       => trans('admin.models'),
 
                                 ])
-@inject('model', 'App\Models\Year')
+@inject('model', 'App\Models\Modell')
 @section('content')
     <div class="box">
     @include('layouts.partials.validation-errors')
@@ -17,8 +17,9 @@
         <div class="box-body">
             <div class="form-group">
                 <label for="brand_id">{{trans('admin.brands')}}</label>
-                {!! Form::select('brand_id',$brands->pluck($nameVC),null,[
+                {!! Form::select('brand_id',$brands,null,[
                     'class'=>'form-control',
+                    'placeholder' => 'اختر الماركة'
                 ])
                 !!}
                 <br>
