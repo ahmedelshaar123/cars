@@ -30,8 +30,8 @@
                             <tr id="removable{{$testimonial->id}}">
                                 <td class="text-center">{{$loop->iteration}}</td>
                                 <td class="text-center">{{$testimonial->$nameVC}}</td>
-                                <td class="text-center">{{$testimonial->$jobVC}}</td>
-                                <td class="text-center">{{$testimonial->$desc}}</td>
+                                <td class="text-center">{{$testimonial->$job}}</td>
+                                <td class="text-center">{!!$testimonial->$descVC!!}</td>
                                 <td class="text-center">
                                     <img src="{{$testimonial->image}}"
                                          alt="" style="height: 50px;">
