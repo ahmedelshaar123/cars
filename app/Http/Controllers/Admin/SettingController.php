@@ -8,8 +8,10 @@ use Illuminate\Routing\Controller;
 class SettingController extends Controller
 {
     public function index(){
-        $settings = Setting::all();
-        return view('admin.settings.index_edit', compact('settings'));
+        $settings = Setting::where('type', '!=', 'map')->get();
+        $lat = Setting::where('key', 'lat')->first();
+        $lng = Setting::where('key', 'lng')->first();
+        return view('admin.settings.index_edit', compact('settings', 'lat', 'lng'));
     }
 
     public function update(SettingRequest $request)
