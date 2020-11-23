@@ -23,9 +23,18 @@ class BrandRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-            'name_ar' => 'required|max:60',
-            'name_en' => 'required|max:60',
-        ];
+        $id = $this->route('brand');
+        if($id != null){
+            return [
+                'name_ar' => 'required|max:60|unique:brands,name_ar,' . $id,
+                'name_en' => 'required|max:60|unique:brands,name_en,' . $id
+            ];
+        } else {
+            return [
+                'name_ar' => 'required|max:60|unique:brands',
+                'name_en' => 'required|max:60|unique:brands'
+            ];
+    }
+
     }
 }
