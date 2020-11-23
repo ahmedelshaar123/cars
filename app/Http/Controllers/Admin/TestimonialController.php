@@ -16,8 +16,7 @@ class TestimonialController extends Controller
         $testimonials = Testimonial::all();
         $lang = \LaravelLocalization::getCurrentLocale();
         $job = 'job_'.$lang;
-        $features = 'features_'.$lang;
-        return view('admin.testimonials.index', compact('testimonials', 'job', 'features'));
+        return view('admin.testimonials.index', compact('testimonials', 'job'));
 
     }
 
