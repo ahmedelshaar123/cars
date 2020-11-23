@@ -31,6 +31,8 @@ Route::group(
             Route::resource('years', 'YearController');
             //brands route
             Route::resource('brands', 'BrandController');
+            //models route
+            Route::resource('models', 'ModelController');
 
         });
     });
