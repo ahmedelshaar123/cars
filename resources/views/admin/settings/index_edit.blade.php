@@ -26,20 +26,20 @@
                 <div class="form-body">
                     <div class="form-group">
                         @if($setting->type == 'email')
-                            <label for="{{$setting->key}}">{{$setting->$name}}</label>
-                            {!! Form::email($setting->key,$setting->$value,[
+                            <label for="{{$setting->key}}">{{$setting->$nameVC}}</label>
+                            {!! Form::email($setting->key,$setting->$valueVC,[
                                 'class'=>'form-control',
                             ]) !!}
                             <br>
                         @elseif($setting->type == 'number')
-                            <label for="{{$setting->key}}">{{$setting->$name}}</label>
-                            {!! Form::number($setting->key,$setting->$value,[
+                            <label for="{{$setting->key}}">{{$setting->$nameVC}}</label>
+                            {!! Form::number($setting->key,$setting->$valueVC,[
                                 'class'=>'form-control',
                             ]) !!}
                             <br>
                         @elseif($setting->type == 'text')
-                            <label for="{{$setting->key}}">{{$setting->$name}}</label>
-                            {!! Form::text($setting->key,$setting->$value,[
+                            <label for="{{$setting->key}}">{{$setting->$nameVC}}</label>
+                            {!! Form::text($setting->key,$setting->$valueVC,[
                                 'class'=>'form-control',
                             ]) !!}
                             <br>
@@ -48,8 +48,8 @@
                 </div>
             @endforeach
             <div id="map" style="height: 350px;"></div>
-            <input type="hidden" name="{{$lat->key}}" value="{{$lat->$value}}" id="lat">
-            <input type="hidden" name="{{$lng->key}}" value="{{$lng->$value}}" id="lng">
+            <input type="hidden" name="{{$lat->key}}" value="{{$lat->$valueVC}}" id="lat">
+            <input type="hidden" name="{{$lng->key}}" value="{{$lng->$valueVC}}" id="lng">
             <br>
 
             <div class="box-footer">
@@ -73,13 +73,13 @@
     </script>
 
     <script>
-        var map = L.map('map').setView([{{$lat->$value}}, {{$lng->$value}}], 5);
+        var map = L.map('map').setView([{{$lat->$valueVC}}, {{$lng->$valueVC}}], 5);
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
 
-        var marker = L.marker([{{$lat->$value}}, {{$lng->$value}}],{
+        var marker = L.marker([{{$lat->$valueVC}}, {{$lng->$valueVC}}],{
             draggable: true
 
         }).addTo(map)

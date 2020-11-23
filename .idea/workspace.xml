@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="befd4eae-1f08-4bde-b6d2-011f2a56d0eb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/settings/index_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/settings/index_edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +141,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/models" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -150,9 +153,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\cars\resources\views\admin" />
       <recent name="C:\xampp\htdocs\cars\resources\views\admin\models" />
       <recent name="C:\xampp\htdocs\cars\resources\views\admin\brands" />
-      <recent name="C:\xampp\htdocs\cars\resources\views\admin" />
       <recent name="C:\xampp\htdocs\cars\app\Http\Controllers\Admin" />
       <recent name="C:\xampp\htdocs\cars\resources\views" />
     </key>
@@ -176,7 +179,7 @@
       <updated>1606053632748</updated>
       <workItem from="1606053633880" duration="2293000" />
       <workItem from="1606055982196" duration="7252000" />
-      <workItem from="1606122244281" duration="5758000" />
+      <workItem from="1606122244281" duration="8892000" />
     </task>
     <servers />
   </component>

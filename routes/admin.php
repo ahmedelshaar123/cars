@@ -36,6 +36,9 @@ Route::group(
             //settings route
             Route::get('settings', 'SettingController@index');
             Route::put('update-settings', 'SettingController@update');
+            //static pages route
+            Route::get('static-pages', 'StaticPageController@index');
+            Route::put('update-static-pages', 'StaticPageController@update');
 
         });
     });
