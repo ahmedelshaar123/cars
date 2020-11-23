@@ -16,13 +16,14 @@
         <div class="box-body">
             <div class="form-group">
                 <label for="brand_id">{{trans('admin.brands')}}</label>
-                {!! Form::select('brand_id',$brands->pluck($nameVC),$model->brand->$nameVC,[
+                {!! Form::select('brand_id',$brands,null,[
                     'class'=>'form-control',
+                    'placeholder'=>'اختر الماركة',
                 ])
                 !!}
                 <br>
                 <label for="name">{{trans('admin.models')}}</label>
-                {!! Form::text('name',$model->$nameVC,[
+                {!! Form::text('name',$model->name,[
                     'class'=>'form-control',
                 ]) !!}
                 <br>

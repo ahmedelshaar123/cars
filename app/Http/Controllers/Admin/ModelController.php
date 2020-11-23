@@ -71,7 +71,8 @@ class ModelController extends Controller
     public function edit($id)
     {
         $model = Modell::findOrFail($id);
-        $brands = Brand::all();
+        $lang = \LaravelLocalization::getCurrentLocale();
+        $brands = Brand::pluck("name_$lang",'id')->toArray();
         return view('admin.models.edit', compact('model', 'brands'));
 
     }

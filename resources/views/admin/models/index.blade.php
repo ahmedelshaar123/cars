@@ -27,7 +27,7 @@
                             @foreach($models as $model)
                                 <tr id="removable{{$model->id}}">
                                     <td class="text-center">{{$loop->iteration}}</td>
-                                    <td class="text-center">{{$model->$nameVC}}</td>
+                                    <td class="text-center">{{$model->name}}</td>
                                     <td class="text-center">{{$model->brand->$nameVC}}</td>
                                     <td class="text-center"><a href="{{route('models.edit', $model->id)}}"
                                                                class="btn btn-xs btn-success"><i class="fa fa-edit"></i></a>
