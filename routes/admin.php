@@ -33,6 +33,9 @@ Route::group(
             Route::resource('brands', 'BrandController');
             //models route
             Route::resource('models', 'ModelController');
+            //settings route
+            Route::get('settings', 'SettingController@index');
+            Route::put('update-settings', 'SettingController@update');
 
         });
     });
