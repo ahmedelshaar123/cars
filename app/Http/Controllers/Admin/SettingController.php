@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
-use App\Http\Requests\SettingRequest;
+use App\Http\Requests\Admin\SettingRequest;
 use App\Models\Setting;
 use Illuminate\Routing\Controller;
 
