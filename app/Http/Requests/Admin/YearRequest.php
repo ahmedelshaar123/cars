@@ -23,8 +23,16 @@ class YearRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-            'year' => 'required|digits:4|unique:years'
-        ];
+        $id = $this->route('year');
+        if ($id != null) {
+            return [
+                'year' => 'required|digits:4|unique:years,year,' . $id
+
+            ];
+        } else {
+            return [
+                'year' => 'required|digits:4|unique:years'
+            ];
+        }
     }
 }
