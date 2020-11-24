@@ -38,6 +38,8 @@ Route::group(
             Route::resource('testimonials', 'TestimonialController');
             //sliders route
             Route::resource('sliders', 'SliderController');
+            //services route
+            Route::resource('services', 'ServiceController');
             //settings route
             Route::get('settings', 'SettingController@index');
             Route::put('update-settings', 'SettingController@update');

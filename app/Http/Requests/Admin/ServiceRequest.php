@@ -4,7 +4,7 @@ namespace App\Http\Requests\Admin;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class TestimonialRequest extends FormRequest
+class ServiceRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -26,24 +26,26 @@ class TestimonialRequest extends FormRequest
         switch ($this->method()) {
             case 'POST':
                 return [
-                    'name_ar' => 'required|max:20',
-                    'name_en' => 'required|max:20',
-                    'job_ar' => 'required|max:20',
-                    'job_en' => 'required|max:20',
+                    'name_ar' => 'required|max:60',
+                    'name_en' => 'required|max:60',
                     'desc_ar' => 'required',
                     'desc_en' => 'required',
-                    'image' => 'required|image|mimes:png,jpg,gif,jpeg|max:3072',
+                    'features_ar' => 'required',
+                    'features_en' => 'required',
+                    'image' => 'required|array',
+                    'image.*' => 'image|mimes:jpg,jpeg,png,gif|max:3072'
                 ];
             case 'PUT':
             case 'PATCH':
                 return [
-                    'name_ar' => 'required|max:20',
-                    'name_en' => 'required|max:20',
-                    'job_ar' => 'required|max:20',
-                    'job_en' => 'required|max:20',
+                    'name_ar' => 'required|max:60',
+                    'name_en' => 'required|max:60',
                     'desc_ar' => 'required',
                     'desc_en' => 'required',
-                    'image' => 'image|mimes:png,jpg,gif,jpeg|max:3072',
+                    'features_ar' => 'required',
+                    'features_en' => 'required',
+                    'image' => 'array',
+                    'image.*' => 'image|mimes:jpg,jpeg,png,gif|max:3072'
                 ];
         }
     }

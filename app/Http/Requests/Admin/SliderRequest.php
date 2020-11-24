@@ -23,8 +23,16 @@ class SliderRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-            'image' => 'required|image|mimes:png,jpeg,gif,jpg'
-        ];
+        switch ($this->method()) {
+            case 'POST':
+                return [
+                    'image' => 'required|image|mimes:png,jpeg,gif,jpg'
+                ];
+            case 'PUT':
+            case 'PATCH':
+                return [
+                    'image' => 'image|mimes:png,jpeg,gif,jpg'
+                ];
+        }
     }
 }
