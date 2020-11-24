@@ -42,6 +42,7 @@ Route::group(
             Route::resource('services', 'ServiceController');
             //repaired cars route
             Route::resource('repaired-cars', 'RepairedCarController');
+            Route::put('repaired-car-status/{id}', 'RepairedCarStatusController@update')->name('repaired-car-status');
             //settings route
             Route::get('settings', 'SettingController@index');
             Route::put('update-settings', 'SettingController@update');
