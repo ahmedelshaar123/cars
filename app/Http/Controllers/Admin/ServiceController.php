@@ -41,14 +41,7 @@ class ServiceController extends Controller
     {
         $service = Service::create($request->all());
 
-        foreach($request->file('image') as $file){
-            $path = public_path();
-            $destinationPath = $path . '/uploads/services';
-            $extension = $file->getClientOriginalExtension();
-            $name = time() . '' . rand(11111, 99999) . '.' . $extension;
-            $file->move($destinationPath, $name);
-            $service->photos()->create(['path' => 'uploads/services/' . $name]);
-        }
+        makeImages($request->file('image'), $service);
         session()->flash('key', trans('admin.added'));
         return redirect(route('services.index'));
 
@@ -96,15 +89,7 @@ class ServiceController extends Controller
             }
             $service->photos()->delete();
 
-            foreach ($request->file('image') as $file) {
-                $path = public_path();
-                $destinationPath = $path . '/uploads/services';
-                $image = $file;
-                $extension = $image->getClientOriginalExtension();
-                $name = time() . '' . rand(11111, 99999) . '.' . $extension;
-                $image->move($destinationPath, $name);
-                $service->photos()->create(['path' => 'uploads/services/' . $name]);
-            }
+            makeImages($request->file('image'), $service);
         }
         session()->flash('key', trans('admin.edited'));
         return redirect(route('services.index'));
