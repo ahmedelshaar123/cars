@@ -59,16 +59,16 @@ return [
   'home' => 'Home',
   'login' => 'Login',
   //app
-  'db' => '',
-  'logout' => '',
-  'lang' => '',
-  'all_rights_reserved' => '',
-  'sure' => '',
-  'once_deleted' => '',
-  'success_op' => '',
-  'deleted' => '',
-  'cant_del' => '',
-  'cancelled' => '',
+  'db' => 'Dashboard',
+  'logout' => 'Logout',
+  'lang' => 'Language',
+  'all_rights_reserved' => 'All Rights Reserved',
+  'sure' => 'Are You Sure?',
+  'once_deleted' => 'Once Deleted, Can Not Be Retrieved',
+  'success_op' => 'Successful Operation',
+  'deleted' => 'Deleted',
+  'cant_del' => 'Record Can Not Be Deleted',
+  'cancelled' => 'Cancelled',
 
 
 
