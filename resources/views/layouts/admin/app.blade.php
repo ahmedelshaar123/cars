@@ -60,7 +60,7 @@
                                 </script>
                                 {!! Form::open(['method' => 'post', 'url' => url('logout'),'id'=>'signoutForm','id'=>'signoutSidebar']) !!}
                                 {!! Form::close() !!}
-                                <a href="{{route('logout')}}" onclick="submitSidebarSignout()">{{trans('admin.logout')}}</a>
+                                <a href="{{url('logout')}}" onclick="submitSidebarSignout()">{{trans('admin.logout')}}</a>
                             </li>
                         </ul>
                     </div>
@@ -119,14 +119,14 @@
                     {{--            models--}}
                     <li>
                         <a href="{{url('admin/models')}}">
-                            <i class="fa fa-car-battery" aria-hidden="true"></i>
+                            <i class="fa fa-car" aria-hidden="true"></i>
                             <span class="nav-label">{{trans('admin.models')}}</span>
                         </a>
                     </li>
                     {{--            repaired cars--}}
                     <li>
                         <a href="{{url('admin/repaired-cars')}}">
-                            <i class="fa fa-car-crash" aria-hidden="true"></i>
+                            <i class="fa fa-car" aria-hidden="true"></i>
                             <span class="nav-label">{{trans('admin.repaired_cars')}}</span>
                         </a>
                     </li>
@@ -205,7 +205,7 @@
                         </script>
                         {!! Form::open(['method' => 'post', 'url' => url('logout'),'id'=>'signoutForm']) !!}
                         {!! Form::close() !!}
-                        <a href="{{route('logout')}}" onclick="submitSignout()">
+                        <a href="{{url('logout')}}" onclick="submitSignout()">
                           <i class="fa fa-sign-out"></i>{{trans('admin.logout')}}
                         </a>
                     </li>

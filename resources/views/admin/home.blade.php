@@ -55,9 +55,9 @@
             </div>
 
             <div class="col-lg-3">
-                <div class="widget white-bg p-lg text-center">
+                <div class="widget bg-green p-lg text-center">
                     <div class="m-b-md">
-                        <i class="fa fa-car-crash fa-4x"></i>
+                        <i class="fa fa-car fa-4x"></i>
                         <h1 class="m-xs">{{$repairedCars}}</h1>
                         <h3 class="font-bold no-margins">
                             {{trans('admin.repaired_cars')}}
@@ -67,7 +67,7 @@
             </div>
 
             <div class="col-lg-3">
-                <div class="widget gray-bg p-lg text-center">
+                <div class="widget blue-bg p-lg text-center">
                     <div class="m-b-md">
                         <i class="fa fa-phone fa-4x"></i>
                         <h1 class="m-xs">{{$contacts}}</h1>

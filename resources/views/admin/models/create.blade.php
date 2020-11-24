@@ -19,7 +19,7 @@
                 <label for="brand_id">{{trans('admin.brands')}}</label>
                 {!! Form::select('brand_id',$brands,null,[
                     'class'=>'form-control',
-                    'placeholder' => 'اختر الماركة'
+                    'placeholder' => trans('admin.choose_brand')
                 ])
                 !!}
                 <br>
