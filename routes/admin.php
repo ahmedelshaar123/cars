@@ -36,6 +36,8 @@ Route::group(
             Route::resource('models', 'ModelController');
             //testimonials route
             Route::resource('testimonials', 'TestimonialController');
+            //sliders route
+            Route::resource('sliders', 'SliderController');
             //settings route
             Route::get('settings', 'SettingController@index');
             Route::put('update-settings', 'SettingController@update');

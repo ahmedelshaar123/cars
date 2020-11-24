@@ -66,7 +66,9 @@ class TestimonialController extends Controller
     public function edit($id)
     {
         $testimonial = Testimonial::findOrFail($id);
-        return view('admin.testimonials.edit', compact('testimonial'));
+        $lang = \LaravelLocalization::getCurrentLocale();
+        $job = 'job_'.$lang;
+        return view('admin.testimonials.edit', compact('testimonial', 'job'));
 
     }
 

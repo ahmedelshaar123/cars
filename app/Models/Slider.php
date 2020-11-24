@@ -9,6 +9,7 @@ class Slider extends Model
 
     protected $table = 'sliders';
     public $timestamps = true;
+    protected $fillable = array('csrf_token()');
     protected $appends = array('image');
 
     public function photo()

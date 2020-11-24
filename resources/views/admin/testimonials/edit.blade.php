@@ -17,11 +17,12 @@
         <div class="box-body">
             <div class="form-group">
                 @foreach(LaravelLocalization::getSupportedLocales() as $key => $value)
-                    <label for="desc">{{trans("admin.name_$key")}}</label>
+                    <label for="name">{{trans("admin.name_$key")}}</label>
                     {!! Form::text("name_$key",$testimonial->$nameVC,[
                         'class'=>'form-control',
                     ]) !!}
                     <br>
+                    <label for="job">{{trans("admin.job_$key")}}</label>
                     {!! Form::text("job_$key",$testimonial->$job,[
                         'class'=>'form-control',
                     ]) !!}
