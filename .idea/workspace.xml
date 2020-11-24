@@ -21,9 +21,12 @@
   <component name="ChangeListManager">
     <list default="true" id="befd4eae-1f08-4bde-b6d2-011f2a56d0eb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ConfirmPasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ConfirmPasswordController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/VerificationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/VerificationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -163,7 +166,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/uploads" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -179,11 +182,11 @@
       <recent name="C:\xampp\htdocs\cars\resources\views\layouts\admin" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\cars\public\uploads" />
       <recent name="C:\xampp\htdocs\cars\resources\views\admin" />
       <recent name="C:\xampp\htdocs\cars\resources\views\admin\sliders" />
       <recent name="C:\xampp\htdocs\cars\resources\views\admin\models" />
       <recent name="C:\xampp\htdocs\cars\resources\views\admin\brands" />
-      <recent name="C:\xampp\htdocs\cars\app\Http\Controllers\Admin" />
     </key>
   </component>
   <component name="RunManager">
@@ -203,7 +206,7 @@
       <workItem from="1606053633880" duration="2293000" />
       <workItem from="1606055982196" duration="7252000" />
       <workItem from="1606122244281" duration="22959000" />
-      <workItem from="1606205931979" duration="18502000" />
+      <workItem from="1606205931979" duration="21133000" />
     </task>
     <servers />
   </component>
@@ -231,5 +234,9 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="0" y="0" width="585" height="680" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1606063170999" />
+    <state x="296" y="150" key="run.anything.popup" timestamp="1606229688959">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="296" y="150" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1606229688959" />
   </component>
 </project>

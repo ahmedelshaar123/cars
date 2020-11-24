@@ -28,7 +28,7 @@ Route::group(
         Route::get('/', function () {
             return view('admin.welcome');
         });
-        Route::middleware('auth', function () {
+        Route::group(['middleware' => 'auth'], function () {
             //home route
             Route::get('home', 'HomeController@index');
             //contacts route
@@ -59,5 +59,7 @@ Route::group(
     });
 });
 
+Route::get('admin/login', 'Auth\LoginController@showLoginForm');
+Route::get('logout', 'Auth\LoginController@logout');
 
 

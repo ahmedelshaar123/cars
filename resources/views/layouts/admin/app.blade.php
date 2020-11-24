@@ -111,7 +111,7 @@
                     </li>
                     {{--            brands--}}
                     <li>
-                        <a href="{{url('admin/brands)}}">
+                        <a href="{{url('admin/brands')}}">
                             <i class="fa fa-car" aria-hidden="true"></i>
                             <span class="nav-label">{{trans('admin.brands')}}</span>
                         </a>
