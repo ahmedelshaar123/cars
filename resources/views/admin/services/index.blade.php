@@ -24,16 +24,17 @@
                             <th class="text-center">{{trans('admin.edit')}}</th>
                             <th class="text-center">{{trans('admin.delete')}}</th>
                         </thead>
-                        <tbody id="ajax_search">
+                        <tbody>
                         @foreach($services as $service)
-                            <tr id="removable{{$feat_estate->id}}">
+                            <tr id="removable{{$service->id}}">
                                 <td class="text-center">{{$loop->iteration}}</td>
-                                <td class="text-center">{{$feat_estate->$nameVC}}</td>
-                                <td class="text-center">{{$feat_estate->$descVC}}</td>
+                                <td class="text-center">{{$service->$nameVC}}</td>
+                                <td class="text-center">{!!$service->$descVC!!}</td>
+                                <td class="text-center">{!!$service->$features!!}</td>
                                 <td class="text-center">
                                     @foreach($service->photos as $photo)
-                                    <img src="{{asset($photo->path)}}"
-                                         alt="" style="height: 50px;">
+                                        <img src="{{asset($photo->path)}}"
+                                             alt="" style="height: 50px;">
                                     @endforeach
                                 </td>
 
@@ -59,4 +60,4 @@
         @endif
     </div>
 
-@endsection
+@stop

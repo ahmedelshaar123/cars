@@ -41,7 +41,14 @@ class ServiceController extends Controller
     {
         $service = Service::create($request->all());
 
-        makeImages($request->file('image'), $service);
+        foreach($request->file('image') as $file){
+            $path = public_path();
+            $destinationPath = $path . '/uploads/services';
+            $extension = $file->getClientOriginalExtension();
+            $name = time() . '' . rand(11111, 99999) . '.' . $extension;
+            $file->move($destinationPath, $name);
+            $service->photos()->create(['path' => 'uploads/services/' . $name]);
+        }
         session()->flash('key', trans('admin.added'));
         return redirect(route('services.index'));
 
@@ -67,7 +74,9 @@ class ServiceController extends Controller
     public function edit($id)
     {
         $service = Service::findOrFail($id);
-        return view('admin.services.edit', compact('service'));
+        $lang = \LaravelLocalization::getCurrentLocale();
+        $features = 'features_'.$lang;
+        return view('admin.services.edit', compact('service', 'features'));
 
     }
 
@@ -89,7 +98,14 @@ class ServiceController extends Controller
             }
             $service->photos()->delete();
 
-            makeImages($request->file('image'), $service);
+            foreach ($request->file('image') as $file) {
+                $path = public_path();
+                $destinationPath = $path . '/uploads/services';
+                $extension = $file->getClientOriginalExtension();
+                $name = time() . '' . rand(11111, 99999) . '.' . $extension;
+                $file->move($destinationPath, $name);
+                $service->photos()->create(['path' => 'uploads/services/' . $name]);
+            }
         }
         session()->flash('key', trans('admin.edited'));
         return redirect(route('services.index'));

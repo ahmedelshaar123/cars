@@ -1,15 +1,15 @@
 @extends('layouts.admin.app',[
             'page_header'       => trans('admin.site'),
-            'page_description'       => trans('admin.feat'),
+            'page_description'       => trans('admin.services'),
 
                                 ])
-@inject('feat_estate', 'App\Models\BottomSlider')
+@inject('service', 'App\Models\Service')
 @section('content')
     <div class="box">
     @include('layouts.partials.validation-errors')
     <!-- form start -->
-        {!! Form::model($feat_estate,[
-                                'action'=>'Admin\FeaturedEstateController@store',
+        {!! Form::model($service,[
+                                'action'=>'Admin\ServiceController@store',
                                 'id'=>'myForm',
                                 'role'=>'form',
                                 'method'=>'POST',
@@ -18,15 +18,21 @@
         <div class="box-body">
             <div class="form-group">
                 @foreach(LaravelLocalization::getSupportedLocales() as $key => $value)
-                    <label for="title">{{trans("admin.title_$key")}}</label>
-                    {!! Form::text("title_$key",null,[
+                    <label for="name">{{trans("admin.name_$key")}}</label>
+                    {!! Form::text("name_$key",null,[
                         'class'=>'form-control',
 
                     ]) !!}
                     <br>
-                    <label for="address">{{trans("admin.address_$key")}}</label>
-                    {!! Form::text("address_$key",null,[
-                        'class'=>'form-control',
+                    <label for="desc">{{trans("admin.desc_$key")}}</label>
+                    {!! Form::textarea("desc_$key",null,[
+                        'class'=>'form-control myTextArea',
+
+                    ]) !!}
+                    <br>
+                    <label for="features">{{trans("admin.features_$key")}}</label>
+                    {!! Form::textarea("features_$key",null,[
+                        'class'=>'form-control  myTextArea',
 
                     ]) !!}
                     <br>

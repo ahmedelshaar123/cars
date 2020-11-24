@@ -20,8 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="befd4eae-1f08-4bde-b6d2-011f2a56d0eb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ServiceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ServiceController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/sliders/160620872396753.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/services/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/services/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/services/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/services/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/services/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/services/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +164,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/sliders" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -175,8 +179,8 @@
       <recent name="C:\xampp\htdocs\cars\resources\views\layouts\admin" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\cars\resources\views\admin\sliders" />
       <recent name="C:\xampp\htdocs\cars\resources\views\admin" />
+      <recent name="C:\xampp\htdocs\cars\resources\views\admin\sliders" />
       <recent name="C:\xampp\htdocs\cars\resources\views\admin\models" />
       <recent name="C:\xampp\htdocs\cars\resources\views\admin\brands" />
       <recent name="C:\xampp\htdocs\cars\app\Http\Controllers\Admin" />
@@ -199,7 +203,7 @@
       <workItem from="1606053633880" duration="2293000" />
       <workItem from="1606055982196" duration="7252000" />
       <workItem from="1606122244281" duration="22959000" />
-      <workItem from="1606205931979" duration="7570000" />
+      <workItem from="1606205931979" duration="10162000" />
     </task>
     <servers />
   </component>
