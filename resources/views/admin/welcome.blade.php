@@ -74,7 +74,7 @@
             @if (Route::has('login'))
                 <div @if(app()->getLocale() == 'ar')  class="top-right links" @else class="top-left links" @endif>
                     @auth
-                        <a href="{{ url('/admin/home') }}">{{trans('admin.home')}}</a>
+                        <a href="{{ url('admin/home') }}">{{trans('admin.home')}}</a>
                     @else
                         <a href="{{ url('admin/login') }}">{{trans('admin.login')}}</a>
 
