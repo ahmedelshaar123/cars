@@ -40,6 +40,8 @@ Route::group(
             Route::resource('sliders', 'SliderController');
             //services route
             Route::resource('services', 'ServiceController');
+            //repaired cars route
+            Route::resource('repaired-cars', 'RepairedCarController');
             //settings route
             Route::get('settings', 'SettingController@index');
             Route::put('update-settings', 'SettingController@update');

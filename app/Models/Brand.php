@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Brand extends Model 
+class Brand extends Model
 {
 
     protected $table = 'brands';
@@ -13,7 +13,7 @@ class Brand extends Model
 
     public function models()
     {
-        return $this->hasMany('App\Models\Model');
+        return $this->hasMany('App\Models\Modell');
     }
 
 }

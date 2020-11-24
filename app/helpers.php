@@ -18,13 +18,4 @@ function makeImage($request, $dist, $var) {
     }
 }
 
-function makeImages($request, $var) {
-    foreach ($request->file('image') as $file) {
-        $path = public_path();
-        $destinationPath = $path . '/uploads/services';
-        $extension = $file->getClientOriginalExtension();
-        $name = time() . '' . rand(11111, 99999) . '.' . $extension;
-        $file->move($destinationPath, $name);
-        $var->photos()->create(['path' => 'uploads/services/' . $name]);
-    }
-}
+

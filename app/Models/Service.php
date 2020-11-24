@@ -16,6 +16,11 @@ class Service extends Model
         return $this->morphMany('App\Models\Photo', 'photoable');
     }
 
+    public function repairedCars()
+    {
+        return $this->hasMany('App\Models\RepairedCar');
+    }
+
     public function getImagesAttribute()
     {
         return $this->photos()->count() ? asset($this->photos()->first()>path) : null;

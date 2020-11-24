@@ -14,6 +14,11 @@ class Modell extends Model
     public function brand()
     {
         return $this->belongsTo('App\Models\Brand');
+
+    }
+    public function repairedCars()
+    {
+        return $this->hasMany('App\Models\RepairedCar');
     }
 
 }
