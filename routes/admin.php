@@ -25,7 +25,12 @@ Route::group(
     ], function () {
 
     Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
-//        Route::middleware('auth', function () {
+        Route::get('/', function () {
+            return view('admin.welcome');
+        });
+        Route::middleware('auth', function () {
+            //home route
+            Route::get('home', 'HomeController@index');
             //contacts route
             Route::resource('contacts', 'ContactController');
             //years route
@@ -51,7 +56,7 @@ Route::group(
             Route::put('update-static-pages', 'StaticPageController@update');
 
         });
-//    });
+    });
 });
 
 

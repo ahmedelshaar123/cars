@@ -66,7 +66,7 @@
                     </div>
                     <div class="logo-element">{{ config('app.name') }}</div>
                 </li>
-                    {{--            Home--}}
+                    {{--            home--}}
                     <li>
                         <a href="{{url('admin/home')}}">
                             <i class="fa fa-home"></i>
@@ -74,67 +74,25 @@
                         </a>
                     </li>
 
-                    {{--            top sliders--}}
+                    {{--            sliders--}}
                     <li>
-                        <a href="{{url('admin/top-sliders')}}">
+                        <a href="{{url('admin/sliders')}}">
                             <i class="fa fa-sliders"></i>
-                            <span class="nav-label">{{trans('admin.top')}}</span>
+                            <span class="nav-label">{{trans('admin.sliders')}}</span>
                         </a>
                     </li>
-                    {{--            company team--}}
+                    {{--            testimonials--}}
                     <li>
-                        <a href="{{url('admin/company-team')}}">
-                            <i class="fa fa-users"></i>
-                            <span class="nav-label">{{trans('admin.team')}}</span>
+                        <a href="{{url('admin/testimonials')}}">
+                            <i class="fa fa-certificate"></i>
+                            <span class="nav-label">{{trans('admin.testimonials')}}</span>
                         </a>
                     </li>
-                    {{--            featured estates--}}
+                    {{--            years--}}
                     <li>
-                        <a href="{{url('admin/featured-estates')}}">
-                            <i class="fa fa-building-o"></i>
-                            <span class="nav-label">{{trans('admin.feat')}}</span>
-                        </a>
-                    </li>
-                    {{--            services--}}
-                    <li>
-                        <a href="{{url('admin/services')}}">
-                            <i class="fa fa-hand-o-up"></i>
-                            <span class="nav-label">{{trans('admin.services')}}</span>
-                        </a>
-                    </li>
-                    {{--            posts--}}
-                    <li>
-                        <a href="{{url('admin/posts')}}">
-                            <i class="fa fa-newspaper-o" aria-hidden="true"></i>
-                            <span class="nav-label">{{trans('admin.posts')}}</span>
-                        </a>
-                    </li>
-                    {{--            partners--}}
-                    <li>
-                        <a href="{{url('admin/partners')}}">
-                            <i class="fa fa-handshake-o" aria-hidden="true"></i>
-                            <span class="nav-label">{{trans('admin.partners')}}</span>
-                        </a>
-                    </li>
-                    {{--            bottom sliders--}}
-                    <li>
-                        <a href="{{url('admin/bottom-sliders')}}">
-                            <i class="fa fa-sliders" aria-hidden="true"></i>
-                            <span class="nav-label">{{trans('admin.bot')}}</span>
-                        </a>
-                    </li>
-                    {{--            users--}}
-                    <li>
-                        <a href="{{url('admin/users')}}">
-                            <i class="fa fa-user-plus" aria-hidden="true"></i>
-                            <span class="nav-label">{{trans('admin.users')}}</span>
-                        </a>
-                    </li>
-                    {{--            roles--}}
-                    <li>
-                        <a href="{{url('admin/roles')}}">
-                            <i class="fa fa-plus" aria-hidden="true"></i>
-                            <span class="nav-label">{{trans('admin.roles')}}</span>
+                        <a href="{{url('admin/years')}}">
+                            <i class="fa fa-calendar"></i>
+                            <span class="nav-label">{{trans('admin.years')}}</span>
                         </a>
                     </li>
                     {{--            contacts--}}
@@ -144,11 +102,32 @@
                             <span class="nav-label">{{trans('admin.contacts')}}</span>
                         </a>
                     </li>
-                    {{--            subscribers--}}
+                    {{--            services--}}
                     <li>
-                        <a href="{{url('admin/subscribers')}}">
-                            <i class="fa fa-mail-reply-all"></i>
-                            <span class="nav-label">{{trans('admin.subscribers')}}</span>
+                        <a href="{{url('admin/services')}}">
+                            <i class="fa fa-first-order"></i>
+                            <span class="nav-label">{{trans('admin.services')}}</span>
+                        </a>
+                    </li>
+                    {{--            brands--}}
+                    <li>
+                        <a href="{{url('admin/brands)}}">
+                            <i class="fa fa-car" aria-hidden="true"></i>
+                            <span class="nav-label">{{trans('admin.brands')}}</span>
+                        </a>
+                    </li>
+                    {{--            models--}}
+                    <li>
+                        <a href="{{url('admin/models')}}">
+                            <i class="fa fa-car-battery" aria-hidden="true"></i>
+                            <span class="nav-label">{{trans('admin.models')}}</span>
+                        </a>
+                    </li>
+                    {{--            repaired cars--}}
+                    <li>
+                        <a href="{{url('admin/repaired-cars')}}">
+                            <i class="fa fa-car-crash" aria-hidden="true"></i>
+                            <span class="nav-label">{{trans('admin.repaired_cars')}}</span>
                         </a>
                     </li>
                     {{--            static pages--}}
