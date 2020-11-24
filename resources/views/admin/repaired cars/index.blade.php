@@ -34,12 +34,12 @@
                                     <form method="POST" action="{{route('repaired-car-status', $repairedCar->id)}}">
                                         {{method_field('PUT')}} {{csrf_field()}}
                                         <select name="status">
-                                            <option {{$repairedCar->status == 'not_repaired' ? 'selected' : ''}} value="not_repaired">لم يتم الاصلاح</option>
-                                            <option {{$repairedCar->status == 'cant_repaired' ? 'selected' : ''}} value="cant_repaired">تعذر الاصلاح</option>
-                                            <option {{$repairedCar->status == 'repaired' ? 'selected' : ''}} value="repaired">تم الاصلاح</option>
+                                            <option {{$repairedCar->status == 'not_repaired' ? 'selected' : ''}} value="not_repaired">{{trans('admin.not_repaired')}}</option>
+                                            <option {{$repairedCar->status == 'cant_repaired' ? 'selected' : ''}} value="cant_repaired">{{trans('admin.cant_repaired')}}</option>
+                                            <option {{$repairedCar->status == 'repaired' ? 'selected' : ''}} value="repaired">{{trans('admin.repaired')}}</option>
                                         </select>
                                         <br><br>
-                                        <button type="submit" style="color: #0a6ebd">تعديل</button>
+                                        <button type="submit" style="color: #0a6ebd">{{trans('admin.update')}}</button>
                                     </form>
                                 </td>
                             </tr>

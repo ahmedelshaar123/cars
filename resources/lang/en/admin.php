@@ -45,6 +45,33 @@ return [
   'settings' => 'Settings',
   //static pages
   'static_pages' => 'Static Pages',
+  //repaired cars
+  'repaired_cars' => 'Repaired Cars',
+  'service' => 'Service',
+  'status' => 'Status',
+  'not_repaired' => 'Not Repaired',
+  'cant_repaired' => 'Can Not Be Repaired',
+  'repaired' => 'Repaired',
+  'update' => 'Update',
+  //home
+  'statistics' => 'Statistics',
+  //welcome
+  'home' => 'Home',
+  'login' => 'Login',
+  //app
+  'db' => '',
+  'logout' => '',
+  'lang' => '',
+  'all_rights_reserved' => '',
+  'sure' => '',
+  'once_deleted' => '',
+  'success_op' => '',
+  'deleted' => '',
+  'cant_del' => '',
+  'cancelled' => '',
+
+
+
 
 
 
