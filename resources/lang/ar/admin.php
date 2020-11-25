@@ -69,6 +69,7 @@ return [
     'deleted' => 'تم الحذف بنجاح',
     'cant_del' => 'لا يمكن الحذف',
     'cancelled' => 'تم الالغاء',
+    'welcome' => 'مرحبا',
 
 
 

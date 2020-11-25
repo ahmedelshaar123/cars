@@ -104,7 +104,7 @@ class ModelController extends Controller
         if($model->repairedCars()->count()) {
             return response()->json('not-delete');
         }
-        Modell::destroy($id);
+        $model->delete();
         return response()->json('delete');
     }
 

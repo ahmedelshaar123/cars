@@ -95,7 +95,7 @@ class BrandController extends Controller
         if($brand->models()->count()) {
             return response()->json('not-delete');
         }
-        Brand::destroy($id);
+        $brand->delete();
         return response()->json('delete');
     }
 

@@ -10,7 +10,7 @@ class CreateModelsTable extends Migration {
 		Schema::create('models', function(Blueprint $table) {
 			$table->increments('id');
 			$table->timestamps();
-			$table->string('name');
+			$table->string('name')->unique();
 			$table->integer('brand_id')->unsigned();
 		});
 	}

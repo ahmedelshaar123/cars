@@ -21,7 +21,7 @@ class CreateRepairedCarsTable extends Migration
             $table->string('phone');
             $table->string('year');
             $table->enum('status', array('not_repaired', 'cant_repaired', 'repaired'));
-            $table->unsignedInteger('model_id');
+            $table->unsignedInteger('modell_id');
             $table->unsignedInteger('service_id');
         });
     }

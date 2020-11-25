@@ -69,6 +69,7 @@ return [
   'deleted' => 'Deleted',
   'cant_del' => 'Record Can Not Be Deleted',
   'cancelled' => 'Cancelled',
+  'welcome' => 'Welcome',
 
 
 

@@ -37,7 +37,7 @@
                     <div class="dropdown profile-element">
                         {{--// profile image and display name of user--}}
                         <span>
-{{--                           <p>{{trans('admin.welcome') . ' ' . auth()->user()->name}}</p>--}}
+                           <p>{{trans('admin.welcome') . ' ' . auth()->user()->name}}</p>
                          </span>
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="clear">

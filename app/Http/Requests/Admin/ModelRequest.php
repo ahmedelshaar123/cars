@@ -23,9 +23,17 @@ class ModelRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-            'name' => 'required|max:60',
-            'brand_id' => 'required|exists:brands,id'
-        ];
+        $id = $this->route('model');
+        if ($id != null) {
+            return [
+                'name' => 'required|max:60|unique:models,name,' . $id,
+                'brand_id' => 'required|exists:brands,id'
+            ];
+        } else {
+            return [
+                'name' => 'required|max:60|unique:models,name',
+                'brand_id' => 'required|exists:brands,id'
+            ];
+        }
     }
 }
