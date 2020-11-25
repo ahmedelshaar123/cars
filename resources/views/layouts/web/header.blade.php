@@ -9,36 +9,36 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
 
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    <li class="nav-item {{request()->segment(2) == '' ? 'active' : ''}}">
+                        <a class="nav-link" href="{{url('/')}}">Home <span class="sr-only">(current)</span></a>
                     </li>
 
-                    <li class="nav-item ">
-                        <a class="nav-link" href="about.html">About Us</a>
+                    <li class="nav-item {{request()->segment(2) == 'about' ? 'active' : ''}}">
+                        <a class="nav-link" href="{{url('about')}}">About Us</a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="services.html"> Services</a>
+                    <li class="nav-item {{request()->segment(2) == 'services' ? 'active' : ''}}">
+                        <a class="nav-link" href="{{url('services')}}"> Services</a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="gallarey.html">Gallery</a>
+                    <li class="nav-item {{request()->segment(2) == 'galleries' ? 'active' : ''}}">
+                        <a class="nav-link" href="{{url('galleries')}}">Gallery</a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="testmoinal.html">Testimonial</a>
+                    <li class="nav-item {{request()->segment(2) == 'testimonials' ? 'active' : ''}}">
+                        <a class="nav-link" href="{{url('testimonials')}}">Testimonial</a>
 
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact_us.html">Contact Us</a>
+                    <li class="nav-item {{request()->segment(2) == 'contact-us' ? 'active' : ''}}">
+                        <a class="nav-link" href="{{url('contact-us')}}">Contact Us</a>
 
                     </li>
-                    <a href="#">
-                        <i class="fa fa-search ml-lg-5  text-white" style="font-size: 20px; margin-top: 2.5rem"></i>
-                    </a>
-                    <a href="#">
-                        <button class="btn btn-info  pt-1 pb-2   ml-lg-3 btton" data-toggle="modal" data-target="#exampleModal1"> Login</button>
-                    </a>
+{{--                    <a href="#">--}}
+{{--                        <i class="fa fa-search ml-lg-5  text-white" style="font-size: 20px; margin-top: 2.5rem"></i>--}}
+{{--                    </a>--}}
+{{--                    <a href="#">--}}
+{{--                        <button class="btn btn-info  pt-1 pb-2   ml-lg-3 btton" data-toggle="modal" data-target="#exampleModal1"> Login</button>--}}
+{{--                    </a>--}}
 
                 </ul>
 
