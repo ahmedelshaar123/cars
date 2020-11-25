@@ -1,5 +1,71 @@
-@extends('layouts.web.app')
-@section('content')
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Car Repair</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/main.css">
+</head>
+
+<body di r="ltr" class="ltr">
+
+<!-- <body> -->
+<header>
+    <!-- NavBar -->
+    <nav class="navbar navvbar navbar-expand-lg py-2 py-lg-2 w-100 navbar-fixed-top fixed-top">
+        <div class="container ">
+            <a class="navbar-brand " href="#"><img src="dist/img/log0o.png" class=" m-0 p-0   hvr-wobble-top " width="130px" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item  ">
+                        <a class="nav-link" href="index.html"> Home <span class="sr-only">(current)</span></a>
+                    </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="services.html"> Services</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallarey.html">Gallery</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="testmoinal.html">Testimonial</a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact_us.html">Contact Us</a>
+
+                    </li>
+                    <a href="#">
+                        <i class="fa fa-search ml-lg-5  " style="font-size: 20px; margin-top: 2.2rem"></i>
+                    </a>
+                    <a href="#">
+                        <button class="btn btn-info  pt-1 pb-2   ml-lg-3 btton" data-toggle="modal" data-target="#exampleModal1"> Login</button>
+                    </a>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+</header>
 <div class=" position-relative " style="margin-top: 120px;">
     <img src='dist/img/background-breadcamp.png' class=" w-100" style='min-height: 300px; object-fit: cover;' />
     <div class=" position-absolute bread-crum text-center">

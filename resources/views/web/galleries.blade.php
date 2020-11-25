@@ -44,7 +44,7 @@
                                                             <h5 class="text-center text-dark font-weight-bold">{{$service->$nameVC}}</h5>
                                                             <p class="text-dark ">{!! $service->$descVC !!}</p>
                                                             <div class=" d-block mt-1 pb-4">
-                                                                <a href="#" class="btn fourth  btn-lg  pointer   px-3">Read More</a>
+                                                                <a href="{{url('services')}}" class="btn fourth  btn-lg  pointer   px-3">Read More</a>
                                                             </div>
                                                         </div>
 
@@ -75,7 +75,7 @@
                                                                 <h5 class="text-center text-dark font-weight-bold">{{$service->$nameVC}}</h5>
                                                                 <p class="text-dark ">{!! $service->$descVC !!}</p>
                                                                 <div class=" d-block mt-1 pb-4">
-                                                                    <a href="#" class="btn fourth  btn-lg  pointer   px-3">Read More</a>
+                                                                    <a href="{{url('services')}}" class="btn fourth  btn-lg  pointer   px-3">Read More</a>
                                                                 </div>
                                                             </div>
                                                         </div>
