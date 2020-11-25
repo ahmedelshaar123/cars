@@ -24,7 +24,7 @@ Route::group(
         //index route
         Route::get('/', 'IndexController@index');
         //services route
-        Route::get('services', 'ServcieController@index');
+        Route::get('services', 'ServiceController@index');
         //galleries route
         Route::get('galleries', 'GalleryController@index');
         //testimonials route
