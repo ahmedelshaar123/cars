@@ -121,6 +121,9 @@ class ServiceController extends Controller
     public function destroy($id)
     {
         $service = Service::findOrFail($id);
+        if($service->repairedCars()->count()) {
+            return response()->json('not-delete');
+        }
         foreach ($service->photos as $photo) {
             unlink($photo->path);
         }

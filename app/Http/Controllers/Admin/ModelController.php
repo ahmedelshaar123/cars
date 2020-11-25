@@ -100,6 +100,10 @@ class ModelController extends Controller
      */
     public function destroy($id)
     {
+        $model = Modell::findOrFail($id);
+        if($model->repairedCars()->count()) {
+            return response()->json('not-delete');
+        }
         Modell::destroy($id);
         return response()->json('delete');
     }
