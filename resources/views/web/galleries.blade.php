@@ -22,8 +22,8 @@
                 <a class="nav-item nav-link active hvr-skew-forward" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
                    aria-controls="nav-home" aria-selected="true"> All </a>
                 @foreach($services as $service)
-                <a class="nav-item nav-link hvr-skew-forward" id="nav-{{$service->id}}-tab" data-toggle="tab" href="#nav-{{$service->id}}"
-                   role="tab" aria-controls="nav-{{$service->id}}" aria-selected="{{$loop->first ? 'true' : 'false'}}">{{$service->$nameVC}}</a>
+                    <a class="nav-item nav-link hvr-skew-forward" id="nav-{{$service->id}}-tab" data-toggle="tab" href="#nav-{{$service->id}}" role="tab"
+                       aria-controls="nav-{{$service->id}}" aria-selected="{{$loop->first ? 'true' : 'false'}}">{{$service->$nameVC}}</a>
                 @endforeach
             </div>
         </nav>
@@ -34,27 +34,25 @@
                         <div id="lightgallery" class="text-center  pt-3 px-3 pb-0 mb-3 ">
                             <div class="row px-0">
                                 @foreach($services as $service)
-                                    <div class=" col-lg-3 mb-3 px-2 col-md-6 ">
-                                        @foreach($service->photos as $photo)
+                                    @foreach($service->photos as $photo)
+                                        <div class=" col-lg-3 mb-3 px-2 col-md-6 ">
                                             <a href="{{asset($photo->path)}}" class="item">
-                                        @endforeach
-                                            <div class=" position-relative w-100 ">
-                                                @foreach($service->photos as $photo)
+                                                <div class=" position-relative w-100 ">
                                                     <img src="{{asset($photo->path)}}" height="252px" />
-                                                @endforeach
-                                                <div class=" over-sec position-absolute text-light p-3  pointer">
-                                                    <div class="card text-center pt-4 px-1">
-                                                        <h5 class="text-center text-dark font-weight-bold">{{$service->$nameVC}}</h5>
-                                                        <p class="text-dark ">{!! $service->$descVC !!}</p>
-                                                        <div class=" d-block mt-1 pb-4">
-                                                            <a href="{{url('services')}}" class="btn fourth  btn-lg  pointer   px-3">Read More</a>
+                                                    <div class=" over-sec position-absolute text-light p-3  pointer">
+                                                        <div class="card text-center pt-4 px-1">
+                                                            <h5 class="text-center text-dark font-weight-bold">{{$service->$nameVC}}</h5>
+                                                            <p class="text-dark ">{!! $service->$descVC !!}</p>
+                                                            <div class=" d-block mt-1 pb-4">
+                                                                <a href="#" class="btn fourth  btn-lg  pointer   px-3">Read More</a>
+                                                            </div>
                                                         </div>
-                                                    </div>
 
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </a>
-                                    </div>
+                                            </a>
+                                        </div>
+                                    @endforeach
                                 @endforeach
                             </div>
                         </div>
@@ -62,36 +60,37 @@
                 </div>
             </div>
             @foreach($services as $service)
-              <div class="tab-pane fade" id="nav-{{$service->id}}" role="tabpanel" aria-labelledby="nav-{{$service->id}}-tab">
-                <div class="row">
-                    <div class="col-12">
-                        <div id="lightgallery" class="text-center  pt-3 px-3 pb-0 mb-3 ">
-                            <div class="row px-0">
-                                @foreach($service->photos as $photo)
-                                    <div class=" col-lg-3 mb-3 px-2 col-md-6 ">
-                                        <a href="{{asset($photo->path)}}" class="item">
-                                            <div class=" position-relative w-100 ">
-                                                <img src="{{asset($photo->path)}}" height="252px" />
-                                                <div class=" over-sec position-absolute text-light p-3  pointer">
-                                                    <div class="card text-center pt-4 px-1">
-                                                        <h5 class="text-center text-dark font-weight-bold">{{$service->$nameVC}}</h5>
-                                                        <p class="text-dark ">{!! $service->$descVC !!}</p>
-                                                        <div class=" d-block mt-1 pb-4">
-                                                            <a href="{{url('services')}}" class="btn fourth  btn-lg  pointer   px-3">Read More</a>
+                   <div class="tab-pane fade" id="nav-{{$service->id}}" role="tabpanel" aria-labelledby="nav-{{$service->id}}-tab">
+                        <div class="row">
+                            <div class="col-12">
+                                <div id="lightgallery" class="text-center  pt-3 px-3 pb-0 mb-3 ">
+                                    <div class="row px-0">
+                                        @foreach($service->photos as $photo)
+                                            <div class=" col-lg-3 mb-3 px-2 col-md-6 ">
+                                                <a href="{{asset($photo->path)}}" class="item">
+                                                    <div class=" position-relative w-100 ">
+                                                        <img src="{{asset($photo->path)}}" height="252px" />
+                                                        <div class=" over-sec position-absolute text-light p-3  pointer">
+                                                            <div class="card text-center pt-4 px-1">
+                                                                <h5 class="text-center text-dark font-weight-bold">{{$service->$nameVC}}</h5>
+                                                                <p class="text-dark ">{!! $service->$descVC !!}</p>
+                                                                <div class=" d-block mt-1 pb-4">
+                                                                    <a href="#" class="btn fourth  btn-lg  pointer   px-3">Read More</a>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </a>
                                             </div>
-                                        </a>
+                                        @endforeach
                                     </div>
-                                @endforeach
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
+                   </div>
+            @endforeach
             </div>
-        @endforeach
         </div>
     </div>
 </div>
-@endsection
+@stop
