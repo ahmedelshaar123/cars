@@ -31,7 +31,7 @@ class CreateForeignKeys extends Migration {
 			$table->dropForeign('models_brand_id_foreign');
 		});
         Schema::table('repaired_cars', function(Blueprint $table) {
-            $table->dropForeign('repaired_cars_model_id_foreign');
+            $table->dropForeign('repaired_cars_modell_id_foreign');
         });
         Schema::table('repaired_cars', function(Blueprint $table) {
             $table->dropForeign('repaired_cars_service_id_foreign');
