@@ -5,8 +5,6 @@ namespace App\Http\Controllers\Web;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Web\ContactRequest;
 use App\Models\Contact;
-
-
 class ContactController extends Controller
 {
     public function index() {

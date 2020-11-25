@@ -73,7 +73,6 @@
 <div class="container-fluid p-0 m-0 mapp">
     <div class="position-relative">
         <div class=" wheel-map dropshadow mb-4" data-lat="45.7143528" data-lng="-74.0059731" data-zoom="10">
-
         </div>
         <div class="cover-map card rounded-0  p-4">
             <div class="row">
