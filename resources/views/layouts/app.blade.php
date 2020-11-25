@@ -1,80 +1,82 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<!DOCTYPE html>
+<html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--favicons -->
+    <link rel="icon" type="image/png" href="{{asset('uploads/logo.png')}}"/>
+    <link href="{{asset('uploads/logo.png')}}" rel="apple-touch-icon">
+    <!--favicons -->
+    <title> {{trans('admin.site')}} | {{trans('admin.db')}} </title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="{{asset('inspina/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('inspina/font-awesome/css/font-awesome.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('inspina/Ionicons/css/ionicons.min.css')}}">
+    <link href="{{asset('inspina/css/animate.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('inspina/js/plugins/select2/select2.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('inspina/js/plugins/sweetalert/sweetalert.css')}}">
+    <link rel="stylesheet" href="{{asset('inspina/js/plugins/bootstrap-fileinput/css/fileinput.min.css')}}">
+    <link rel="stylesheet" href="{{asset('inspina/js/plugins/lightbox2/css/lightbox.min.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css">
+    <link href="{{asset('inspina/css/style.css')}}" rel="stylesheet">
+    @if(app()->getLocale() == 'ar')
+        <link href="{{asset('inspina/css/bootstrap-rtl.min.css')}}" rel="stylesheet">
+        <link href="{{asset('inspina/css/inspina-rtl.css')}}" rel="stylesheet">
+    @else
+        <link href="{{asset('inspina/css/style.css')}}" rel="stylesheet">
+    @endif
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+    @stack('styles')
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest
-{{--                            <li class="nav-item">--}}
-{{--                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>--}}
-{{--                            </li>--}}
-{{--                            @if (Route::has('register'))--}}
-{{--                                <li class="nav-item">--}}
-{{--                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>--}}
-{{--                                </li>--}}
-{{--                            @endif--}}
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
+<div id="wrapper">
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+        </div>
+    </nav>
+    <div id="page-wrapper" class="gray-bg">
+        <style>
+            span.select2-container {
+                z-index: 10050;
+                width: 100% !important;
+                padding: 0;
+            }
+            .select2-container .select2-search--inline {
+                float: left;
+                width: 100%;
+            }
+        </style>
+        <div class="row border-bottom">
+            <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
+            </nav>
+        </div>
+        <section class="content-header">
+            <h1>
+                {{$page_header ?? trans('admin.site')}}
+                <small>{!! $page_description ?? '' !!}</small>
+            </h1>
+        </section>
+        <div class="wrapper wrapper-content">
+            <div class="row">
+                {{--                @if(session()->has('key'))--}}
+                {{--                    <div class="alert alert-success">{{session()->get('key')}}</div>--}}
+                {{--                @endif--}}
+                <div class="col-lg-12">
+                    @yield('content')
                 </div>
             </div>
-        </nav>
-
-        <main class="py-4">
-            @yield('content')
-        </main>
+            <div class="footer">
+                <div>
+                    <strong>&copy;</strong>{{trans('admin.all_rights_reserved')}}
+                </div>
+            </div>
+        </div>
     </div>
+</div>
+<style>
+    .swal2-popup {
+        font-size: 1.5rem !important;
+    }
+</style>
 </body>
 </html>

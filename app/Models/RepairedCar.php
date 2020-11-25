@@ -8,7 +8,7 @@ class RepairedCar extends Model
 {
     protected $table = 'repaired_cars';
     public $timestamps = true;
-    protected $fillable = array('name', 'email', 'phone', 'year', 'status', 'service_id', 'model_id');
+    protected $fillable = array('name', 'email', 'phone', 'year', 'status', 'service_id', 'modell_id');
 
     public function service()
     {
