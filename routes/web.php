@@ -23,6 +23,15 @@ Route::group(
     Route::group(['namespace' => 'Web'], function () {
         //index route
         Route::get('/', 'IndexController@index');
+        //services route
+        Route::get('services', 'ServcieController@index');
+        //galleries route
+        Route::get('galleries', 'GalleryController@index');
+        //testimonials route
+        Route::get('testimonials', 'TestimonialController@index');
+        //contacts routes
+        Route::get('contact-us', 'ContactController@index');
+        Route::post('contact-us', 'ContactController@store')->name('contact-us');
         //about route
         Route::get('about', 'AboutController@index');
     });

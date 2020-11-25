@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     @stack('styles')
 </head>
-<body di r="ltr" class="ltr">
+<body @if(app()->getLocale() == 'en') dir="ltr" class="ltr" @else dir="rtl" class="rtl" @endif>
 <!-- <body> -->
 @include('layouts.web.header')
 @yield('content')
