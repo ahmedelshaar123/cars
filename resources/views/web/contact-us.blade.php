@@ -79,7 +79,7 @@
                 <div class="col">
                     <h5 class="d-block text-white mb-4 mt-5 font-weight-bold hvr-grow-rotate">@lang('web.contact_info')</h5>
                     <h6 class=" d-block p-arg mr-3 text-white hvr-bob">
-                        <i class="fa fa-map-marker mt-2 pr-2 text-white"></i> Location: {{$addressVC->$valueVC}} <span class="d-block" style="padding-left: 1.6rem;"></span>
+                        <i class="fa fa-map-marker mt-2 pr-2 text-white"></i> {{$addressVC->$valueVC}} <span class="d-block" style="padding-left: 1.6rem;"></span>
                     </h6>
                     <h6 class=" d-block p-arg mr-3 text-white hvr-bob">
                         <i class="fa fa-phone mt-2 rota mr-2 text-white rota"></i> +{{$phoneVC->$valueVC}}
