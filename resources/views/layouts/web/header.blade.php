@@ -33,9 +33,9 @@
                         <a class="nav-link" href="{{url('contact-us')}}">@lang('web.contact_us')</a>
 
                     </li>
-                    <a href="#">
-                        <i class="fa fa-search ml-lg-5  " style="font-size: 20px; margin-top: 2.2rem"></i>
-                    </a>
+{{--                    <a href="#">--}}
+{{--                        <i class="fa fa-search ml-lg-5  " style="font-size: 20px; margin-top: 2.2rem"></i>--}}
+{{--                    </a>--}}
 {{--                    <a href="#">--}}
 {{--                        <button class="btn btn-info  pt-1 pb-2   ml-lg-3 btton" data-toggle="modal" data-target="#exampleModal1"> Login</button>--}}
 {{--                    </a>--}}
