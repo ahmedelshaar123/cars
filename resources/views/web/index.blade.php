@@ -20,7 +20,7 @@
                         <h4>@lang('web.full_service_of')</h4>
                         <h2 class=" font-weight-bold display-4  fon_h2 main-color" style="margin-top: -10px;"> @lang('web.car_repair_and') </h2>
                         <h2 class="font-weight-bold pb-2  display-4 fon_h2 main-color top_P" style="margin-top: -10px;"> @lang('web.maintenance')</h2>
-                        <h4 class="h5 ">@lang('web.over_20_years_of_experiece')</h4>
+                        <h4 class="h5 ">@lang('web.over_20_years_of_experience')</h4>
                     </div>
                 </div>
             @endforeach
@@ -51,7 +51,7 @@
                 <img src="{{asset('web/dist/img/header (3).jpg')}}" alt="" class=" mt-4 hvr-pop " width="100%" height="400px" />
             </div>
             <div class="col-lg-6">
-                <h3 class="font-weight-bold mt-5 hvr-float-shadow">@lang('web.over_20_years_of_experiece')</h3>
+                <h3 class="font-weight-bold mt-5 hvr-float-shadow">@lang('web.over_20_years_of_experience')</h3>
                 {!! $about->$valueVC !!}
 {{--                <div class=" d-block mt-5">--}}
 {{--                    <a href="#" class="btn fourth  btn-lg pointer py-2  ">More Details</a>--}}
@@ -62,7 +62,7 @@
 </div>
 <div class="car_2 py-5 mt-5">
     <div class="container">
-        <h3 class="font-weight-bold text-center">What We Do</h3>
+        <h3 class="font-weight-bold text-center">@lang('web.what_we_do')</h3>
         <p class=" mb-5 d-block font-weight-bold  position-relative under-line text-center main-color">@lang('web.we_repair_and_maintain_all_cars')</p>
         <div class="row">
             <div class="col-lg-4 mt-5-lg mt-4">
@@ -310,7 +310,7 @@
                 <div class="col">
                     <h5 class="d-block text-white mb-4 mt-5 font-weight-bold hvr-grow-rotate">@lang('web.contact_info')</h5>
                     <h6 class=" d-block p-arg mr-3 text-white hvr-bob">
-                        <i class="fa fa-map-marker mt-2 pr-2 text-white"></i> Location: {{$addressVC->$valueVC}} <span class="d-block" style="padding-left: 1.6rem;"></span>
+                        <i class="fa fa-map-marker mt-2 pr-2 text-white"></i> {{$addressVC->$valueVC}} <span class="d-block" style="padding-left: 1.6rem;"></span>
                     </h6>
                     <h6 class=" d-block p-arg mr-3 text-white hvr-bob">
                         <i class="fa fa-phone mt-2 rota mr-2 text-white rota"></i> +{{$phoneVC->$valueVC}}
@@ -320,7 +320,7 @@
                     </h6>
                     <h5 class="d-block text-white my-4 text-white font-weight-bold hvr-grow-rotate">@lang('web.working_times')</h5>
                     <h6 class=" d-block p-arg mr-3 text-white hvr-bob">
-                        <i class="fa fa-clock mt-2 pr-2 text-white"></i>{{$workTimesVC->$valueVC}}
+                        <i class="fa fa-clock mt-2 pr-2 text-white"></i> {{$workTimesVC->$valueVC}}
                     </h6>
                     {{--                    <h6 class="text-white hvr-bob " style="padding-left: 1.6rem;">Fri:Closed</h6>--}}
 

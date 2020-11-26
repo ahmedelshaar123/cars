@@ -22,7 +22,7 @@
                     </li>
 
                     <li class="nav-item {{request()->segment(2) == 'galleries' ? 'active' : ''}}">
-                        <a class="nav-link" href="{{url('galleries')}}">@lang('web.galleries')</a>
+                        <a class="nav-link" href="{{url('galleries')}}">@lang('web.gallery')</a>
                     </li>
 
                     <li class="nav-item {{request()->segment(2) == 'testimonials' ? 'active' : ''}}">

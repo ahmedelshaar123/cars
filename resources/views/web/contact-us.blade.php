@@ -21,7 +21,7 @@
             <div class="col-lg-6">
                 <h5 class="d-block text-black mb-4 mt-5 font-weight-bold hvr-grow-rotate">@lang('web.contact_info')</h5>
                 <h6 class=" d-block p-arg mr-3 text-black hvr-bob">
-                    <i class="fa fa-map-marker mt-2 pr-2 text-black"></i> @lang('web.location'): {{$addressVC->$valueVC}} <span class="d-block " style="padding-left: 2rem;"></span>
+                    <i class="fa fa-map-marker mt-2 pr-2 text-black"></i> {{$addressVC->$valueVC}} <span class="d-block " style="padding-left: 2rem;"></span>
                 </h6>
                 <h6 class=" d-block p-arg mr-3 text-black hvr-bob">
                     <i class="fa fa-phone mt-2 rota mr-2 text-black "></i> +{{$phoneVC->$valueVC}}
@@ -29,9 +29,9 @@
                 <h6 class=" d-block p-arg mr-3 text-black hvr-bob">
                     <i class="fa fa-envelope-o mt-2 pr-2 text-black"></i> {{$emailVC->$valueVC}}
                 </h6>
-                <h5 class="d-block text-black mb-4 mt-5 text-black font-weight-bold hvr-grow-rotate">@lang('web.opening_hours')</h5>
+                <h5 class="d-block text-black mb-4 mt-5 text-black font-weight-bold hvr-grow-rotate">@lang('web.working_times')</h5>
                 <h6 class=" d-block p-arg mr-3 text-black hvr-bob">
-                    <i class="fa fa-clock mt-2 pr-2 text-black "></i>{{$workTimesVC->$valueVC}}
+                    <i class="fa fa-clock mt-2 pr-2 text-black "></i> {{$workTimesVC->$valueVC}}
                 </h6>
 {{--                <h6 class="text-black hvr-bob" style="padding-left: 2rem; ">Fri:Closed</h6>--}}
             </div>
@@ -40,22 +40,22 @@
                     @csrf
                     <div class="form-group ">
                         <label for="exampleInputEmail1" class="mb-2 ">@lang('web.name')</label>
-                        <input type="text" class="form-control form-control-lg " id="exampleInputEmail1" placeholder="User Name" aria-describedby="emailHelp" name="name">
+                        <input type="text" class="form-control form-control-lg " id="exampleInputEmail1" placeholder="@lang('web.name')" aria-describedby="emailHelp" name="name">
                     </div>
 
                     <div class="form-group ">
                         <label for="exampleInputEmail1" class="mb-2 ">@lang('web.phone')</label>
-                        <input type="number" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Mobile Phone" aria-describedby="emailHelp" name="phone">
+                        <input type="number" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="@lang('web.phone')" aria-describedby="emailHelp" name="phone">
 
                     </div>
                     <div class="form-group ">
                         <label for="exampleInputEmail1" class="mb-2">@lang('web.email')</label>
-                        <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Email " aria-describedby="emailHelp" name="email">
+                        <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="@lang('web.email')" aria-describedby="emailHelp" name="email">
 
                     </div>
                     <div class="form-group mt-3">
                         <label for="exampleInputEmail1" class="mb-2  ">@lang('web.message')</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Leave Message " rows="4" style="color: red;" name="message"></textarea>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="@lang('web.message')" rows="4" style="color: red;" name="message"></textarea>
                     </div>
 
                     <div>

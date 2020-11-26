@@ -23,7 +23,7 @@
                 <img src="{{asset('web/dist/img/header (3).jpg')}}" alt="" class=" mt-4 hvr-pop " width="100%" height="400px" />
             </div>
             <div class="col-lg-6">
-                <h3 class="font-weight-bold mt-5 hvr-float-shadow">@lang('web.over_20_years_experience')</h3>
+                <h3 class="font-weight-bold mt-5 hvr-float-shadow">@lang('web.over_20_years_of_experience')</h3>
                 {!! $about->$valueVC !!}
 {{--                <div class=" d-block mt-5 ">--}}
 {{--                    <a href="#" class="btn fourth  btn-lg pointer py-2  ">More Details</a>--}}
