@@ -34,7 +34,7 @@
             <div class="tab-content" id="v-pills-tabContent">
                 @foreach($services as $service)
                     <div class="tab-pane fade show {{$loop->first ? 'active' : ''}}" id="v-pills-{{$service->id}}" role="tabpanel" aria-labelledby="v-pills-{{$service->id}}-tab">
-                        <img src="{{asset($service->photos()->first()->path)}}" alt="" class="mt-md-0 mt-5 hvr-pop" />
+                        <img src="{{asset($service->photos()->first()->path)}}" alt="" class="mt-md-0 mt-5 hvr-pop" style="width: 1000px" height="200px"  />
                         <h3 class="font-weight-bold my-4 hvr-float-shadow">{{$service->$nameVC}}</h3>
                         {!! $service->$descVC !!}
                         {!! $service->$features !!}

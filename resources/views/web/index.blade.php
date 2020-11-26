@@ -4,60 +4,26 @@
     <!-- Slider -->
     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
-            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-
+            @foreach($sliders as $slider)
+                <li data-target="#carouselExampleCaptions" data-slide-to="{{$loop->iteration-1}}" class="{{$loop->first ? 'active' : ''}}"></li>
+            @endforeach
         </ol>
         <div class="carousel-inner slids">
-            <div class="carousel-item active">
-                <div class="over_lay position-relative">
-                    <img src="{{asset('web/dist/img/header (1).jpeg')}}" class="d-block w-100" alt="...">
-                    <div class="cover">
-
+            @foreach($sliders as $slider)
+                <div class="carousel-item {{$loop->first ? 'active' : ''}}">
+                    <div class="over_lay position-relative">
+                        <img src="{{$slider->image}}" class="d-block w-100" alt="...">
+                        <div class="cover">
+                        </div>
+                    </div>
+                    <div class="carousel-caption animate__animated animate__backInLeft">
+                        <h4>Full Service Of</h4>
+                        <h2 class=" font-weight-bold display-4  fon_h2 main-color" style="margin-top: -10px;"> CarRepair& </h2>
+                        <h2 class="font-weight-bold pb-2  display-4 fon_h2 main-color top_P" style="margin-top: -10px;"> Maintenance</h2>
+                        <h4 class="h5 ">Over 20 Years Of Quality</h4>
                     </div>
                 </div>
-                <div class="carousel-caption animate__animated animate__backInLeft">
-                    <h4>Full Service Of</h4>
-                    <h2 class=" font-weight-bold display-4  fon_h2 main-color" style="margin-top: -10px;"> CarRepair& </h2>
-                    <h2 class="font-weight-bold pb-2  display-4 fon_h2 main-color top_P" style="margin-top: -10px;"> Maintenance</h2>
-                    <h4 class="h5 ">Over 20 Years Of Quality</h4>
-
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="over_lay position-relative">
-                    <img src="{{asset('web/dist/img/header (2).jpg')}}" class="d-block w-100" alt="...">
-                    <div class="cover">
-
-                    </div>
-                </div>
-                <div class="carousel-caption animate__animated animate__backInLeft">
-                    <h4>Full Service Of</h4>
-                    <h2 class=" font-weight-bold display-4  fon_h2 main-color" style="margin-top: -10px;"> CarRepair& </h2>
-                    <h2 class="font-weight-bold pb-2  display-4 fon_h2 main-color top_P" style="margin-top: -10px;"> Maintenance</h2>
-                    <h4 class="h5">Over 20 Years Of Quality</h4>
-
-                </div>
-            </div>
-
-            <div class="carousel-item">
-                <div class="over_lay position-relative">
-                    <img src="{{asset('web/dist/img/header (3).jpg')}}" class="d-block w-100" alt="...">
-                    <div class="cover">
-
-                    </div>
-                </div>
-                <div class="carousel-caption animate__animated animate__backInLeft">
-                    <h4>Full Service Of</h4>
-                    <h2 class=" font-weight-bold display-4  fon_h2 main-color" style="margin-top: -10px;"> CarRepair& </h2>
-                    <h2 class="font-weight-bold pb-2  display-4 fon_h2 main-color top_P" style="margin-top: -10px;"> Maintenance</h2>
-                    <h4 class="h5">Over 20 Years Of Quality</h4>
-
-                </div>
-
-            </div>
-
+            @endforeach
         </div>
         <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
             <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
@@ -86,13 +52,10 @@
             </div>
             <div class="col-lg-6">
                 <h3 class="font-weight-bold mt-5 hvr-float-shadow"> Over 20 Years experience</h3>
-                <p class="">Lorem ipsum dolor sit, Voluptatum rem excepturi deleniti assumenda dolor sit quae quisquam sapiente repellat impedit </p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque placeat dignissimos pariatur. Nulla maiores laborum amet fugit tempore sed veritatis pariatur accusantium obcaecati laboriosam.
-                    <br> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque placeat dignissimos pariatur. Nulla maiores laborum amet fugit tempore sed veritatis pariatur accusantium obcaecati laboriosam.
-                </p>
-                <div class=" d-block mt-5">
-                    <a href="#" class="btn fourth  btn-lg pointer py-2  ">More Details</a>
-                </div>
+                {!! $about->$valueVC !!}
+{{--                <div class=" d-block mt-5">--}}
+{{--                    <a href="#" class="btn fourth  btn-lg pointer py-2  ">More Details</a>--}}
+{{--                </div>--}}
             </div>
         </div>
     </div>
@@ -146,46 +109,23 @@
         <p class=" d-block font-weight-bold  position-relative under-line text-center main-color" style="margin-bottom: 5rem;">Clients opinion car repair & maintenance</p>
         <div class=" slide text-center ">
             <!-- Slider -->
-
             <div id="carousel" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
-                    <li data-target="#carousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel" data-slide-to="1"></li>
-                    <li data-target="#carousel" data-slide-to="2"></li>
-
+                    @foreach($testimonials as $testimonial)
+                        <li data-target="#carousel" data-slide-to="{{$loop->iteration-1}}" class="{{$loop->first ? 'active' : ''}}"></li>
+                    @endforeach
                 </ol>
                 <div class="carousel-inner slids">
-                    <div class="carousel-item active">
-                        <div class="user_car mb-3">
-                            <i class="fa fa-user fa-7x" aria-hidden="true"></i>
+                    @foreach($testimonials as $testimonial)
+                        <div class="carousel-item {{$loop->first ? 'active' : ''}}">
+                            <div class="user_car mb-3">
+                                <img src="{{$testimonial->image}}" style="height: 100px" width="100px"/>
+                            </div>
+                            {!! $testimonial->$descVC !!}
+                            <h5><span class="main-color">{{$testimonial->$nameVC}}</span> ,{{$testimonial->$job}}</h5>
                         </div>
-                        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat saepe voluptate nostrum ratione. Aliquam aliquid facere quas consectetur vero? Debitis enim quaerat
-                            mollitia illum sequi porro qui, maiores voluptas animi? Lorem, ipsum dolor Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                        </p>
-                        <h5><span class="main-color">Nada Sameh</span> ,Electrician</h5>
-                    </div>
-                    <div class="carousel-item ">
-                        <div class="user_car mb-3">
-                            <i class="fa fa-user fa-7x" aria-hidden="true"></i>
-                        </div>
-                        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat saepe voluptate nostrum ratione. Aliquam aliquid facere quas consectetur vero? Debitis enim quaerat
-                            mollitia illum sequi porro qui, maiores voluptas animi? Lorem, ipsum dolor Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                        </p>
-                        <h5><span class="main-color">Nada Sameh</span> ,Electrician</h5>
-                    </div>
-                    <div class="carousel-item ">
-                        <div class="user_car mb-3">
-                            <i class="fa fa-user fa-7x" aria-hidden="true"></i>
-                        </div>
-                        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat saepe voluptate nostrum ratione. Aliquam aliquid facere quas consectetur vero? Debitis enim quaerat
-                            mollitia illum sequi porro qui, maiores voluptas animi? Lorem, ipsum dolor Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                        </p>
-                        <h5><span class="main-color">Nada Sameh</span> ,Electrician</h5>
-                    </div>
+                    @endforeach
                 </div>
-
-
-
             </div>
         </div>
     </div>

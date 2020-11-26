@@ -26,7 +26,7 @@
                     @foreach($testimonials as $testimonial)
                         <div class="carousel-item {{$loop->first ? 'active' : ''}}">
                             <div class="user_car mb-3">
-                                <i class="fa fa-user fa-7x" aria-hidden="true"></i>
+                                <img src="{{$testimonial->image}}" style="height: 100px" width="100px"/>
                             </div>
                             {!! $testimonial->$descVC !!}
                             <h5><span class="main-color">{{$testimonial->$nameVC}}</span> ,{{$testimonial->$job}}</h5>
