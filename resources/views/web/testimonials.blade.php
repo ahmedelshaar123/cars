@@ -3,7 +3,7 @@
 <div class=" position-relative " style="margin-top: 120px;">
     <img src='{{asset('web/dist/img/background-breadcamp.png')}}' class=" w-100" style='min-height: 300px; object-fit: cover;' />
     <div class=" position-absolute bread-crum text-center">
-        <h3 class="  text-white d-block text-center h2 hvr-pop">Testimonials</h3>
+        <h3 class="  text-white d-block text-center h2 hvr-pop">@lang('web.testimonials')</h3>
 {{--        <nav aria-label="breadcrumb" class="text-center" style="display: inline-flex;background-color: transparent;">--}}
 {{--            <ol class="breadcrumb">--}}
 {{--                <li class="breadcrumb-item "><a href="index.html" class="main-color ">Home</a></li>--}}

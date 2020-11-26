@@ -139,15 +139,15 @@
                 <p class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium eaque ipsam ducimus earum labore quo reprehenderit molestiae alias odit, fugit soluta quisquam rem natus ut porro dolorum quis esse reiciendis!</p>
                 <div class="row">
                     <div class="col-lg-4 mt-5 hvr-bob">
-                        <h4 class="d-block main-color text-center font-weight-bold">20</h4>
+                        <h4 class="d-block main-color text-center font-weight-bold">{{$yearsOfExperience->$valueVC}}</h4>
                         <h5 class="text-center">Years of EXperience</h5>
                     </div>
                     <div class="col-lg-4 mt-5 hvr-bob">
-                        <h4 class="d-block main-color text-center font-weight-bold">1.5k</h4>
+                        <h4 class="d-block main-color text-center font-weight-bold">{{$repairedCars->$valueVC}}</h4>
                         <h5 class="text-center">Cars Repaired</h5>
                     </div>
                     <div class="col-lg-4 mt-5 hvr-bob">
-                        <h4 class="d-block main-color text-center font-weight-bold">50</h4>
+                        <h4 class="d-block main-color text-center font-weight-bold">{{$workers->$valueVC}}</h4>
                         <h5 class="text-center">Workers & Technicians</h5>
                     </div>
 
@@ -160,7 +160,7 @@
                         <i class="fa fa-play "></i>
                     </div>
                 </div> -->
-                <iframe width="100%" height="340" src="https://www.youtube.com/embed/nFtbf4prm78" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="100%" height="340" src="{{$video->$valueVC}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
             </div>
         </div>
@@ -168,73 +168,71 @@
 </div>
 <div class="car-5 py-5 my-5">
     <div class="container">
+        @include('layouts.partials.validation-errors')
         <h3 class="font-weight-bold text-center text-white h1 ">Car Repair <span class="main-color">Detail</span></h3>
         <p class=" mb-5 d-block  text-center text-white">Get the car repair at the lowest price</p>
-        <div class="row">
-            <div class="col-lg-3 ">
-                <select class="form-control mb-5 font-weight-bold text-black-50" id="exampleFormControlSelect1">
+        <form method="post" action="{{route('repaired-car')}}">
+        @csrf
+            <div class="row">
+                <div class="col-lg-3 ">
+                    <input type="text" placeholder="الاسم" class="form-control mb-5 font-weight-bold text-black-50" name="name">
+                </div>
+                <div class="col-lg-3 ">
+                    <input type="email" placeholder="البريد الالكتروني" class="form-control mb-5 font-weight-bold text-black-50" name="email">
+                </div>
+                <div class="col-lg-3 ">
+                    <input type="number" placeholder="الجوال" class="form-control mb-5 font-weight-bold text-black-50" name="phone">
+                </div>
+                <div class="col-lg-3 ">
+                    <select class="form-control mb-5 font-weight-bold text-black-50" id="brand_id" name="brand_id">
+                        <option value="" selected disabled> Car Brand</option>
+                        @foreach($brands as $brand)
+                            <option value="{{$brand->id}}">{{$brand->$nameVC}}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="col-lg-2 ">
+                    <select class="form-control mb-5 font-weight-bold text-black-50" id="modell_id" name="modell_id[]" >
+                        <option selected disabled> Model</option>
+                    </select>
+                </div>
+                <div class="col-lg-2 ">
+                    <select class="form-control mb-5 font-weight-bold text-black-50" id="exampleFormControlSelect1" name="year">
+                        <option value="" selected disabled> Year</option>
+                        @foreach($years as $year)
+                            <option value="{{$year->year}}">{{$year->year}}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="col-lg-3">
+                    <select class="form-control mb-5 font-weight-bold text-black-50" id="exampleFormControlSelect1" name="service_id">
 
-                    <option> Car Brand</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                </select>
+                        <option value="" selected disabled> Repair Needed</option>
+                        @foreach($services as $service)
+                            <option value="{{$service->id}}">{{$service->$nameVC}}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="col-lg-2">
+                    <a href="#">
+                        <button class="btn btn-info    ml-lg-3 mt-2  btn_color">Send </button>
+                    </a>
+                </div>
             </div>
-            <div class="col-lg-2 ">
-                <select class="form-control mb-5 font-weight-bold text-black-50" id="exampleFormControlSelect1">
-
-                    <option> Model</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                </select>
-            </div>
-            <div class="col-lg-2 ">
-                <select class="form-control mb-5 font-weight-bold text-black-50" id="exampleFormControlSelect1">
-
-                    <option> Year</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                </select>
-            </div>
-            <div class="col-lg-3">
-                <select class="form-control mb-5 font-weight-bold text-black-50" id="exampleFormControlSelect1">
-
-                    <option> Repair Needed</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                </select>
-            </div>
-            <div class="col-lg-2">
-                <a href="#">
-                    <button class="btn btn-info    ml-lg-3 mt-2  btn_color">Send </button>
-                </a>
-            </div>
-        </div>
-
-
-
+        </form>
     </div>
 </div>
 
-<div class="car_6 mt-3 py-5 tabs">
+<div class="car_6  pb-5 pt-4 tabs mb-5">
     <div class="container">
-        <h3 class="font-weight-bold text-center">Gallery</h3>
-        <p class=" mb-5 d-block font-weight-bold  position-relative under-line text-center main-color">Some image of car repair & maintenance </p>
         <nav class="reserve ">
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                <a class="nav-item nav-link active hvr-skew-forward" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true"> All </a>
-                <a class="nav-item nav-link hvr-skew-forward" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false"> Oil Change</a>
-                <a class="nav-item nav-link hvr-skew-forward" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Tire Change</a>
-                <a class="nav-item nav-link hvr-skew-forward" id="nav-contact_us-tab" data-toggle="tab" href="#nav-contact_us" role="tab" aria-controls="nav-contact_us" aria-selected="false">Engine Repair</a>
-                <a class="nav-item nav-link hvr-skew-forward" id="nav-contact_u-tab" data-toggle="tab" href="#nav-contact_u" role="tab" aria-controls="nav-contact_u" aria-selected="false">Transmission Change</a>
-                <a class="nav-item nav-link hvr-skew-forward" id="nav-contact_ue-tab" data-toggle="tab" href="#nav-contact_ue" role="tab" aria-controls="nav-contact_ue" aria-selected="false">Brake Repair</a>
+                <a class="nav-item nav-link active hvr-skew-forward" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+                   aria-controls="nav-home" aria-selected="true"> All </a>
+                @foreach($services as $service)
+                    <a class="nav-item nav-link hvr-skew-forward" id="nav-{{$service->id}}-tab" data-toggle="tab" href="#nav-{{$service->id}}" role="tab"
+                       aria-controls="nav-{{$service->id}}" aria-selected="{{$loop->first ? 'true' : 'false'}}">{{$service->$nameVC}}</a>
+                @endforeach
             </div>
         </nav>
         <div class="tab-content p-3 p-lg-4" id="nav-tabContent">
@@ -243,657 +241,88 @@
                     <div class="col-12">
                         <div id="lightgallery" class="text-center  pt-3 px-3 pb-0 mb-3 ">
                             <div class="row px-0">
-                                <div class=" col-lg-3 mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (14).jpg')}}" class="item">
-                                        <div class="">
-                                            <img src="{{asset('web/dist/img/pic (14).jpg')}}" height="250px" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class=" col-lg-3 mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (4).jpg')}}" class="item">
-                                        <div class="   ">
-                                            <img src="{{asset('web/dist/img/pic (4).jpg')}}" height="250px" />
-                                        </div>
-                                    </a>
+                                @foreach($services as $service)
+                                    @foreach($service->photos as $photo)
+                                        <div class=" col-lg-3 mb-3 px-2 col-md-6 ">
+                                            <a href="{{asset($photo->path)}}" class="item">
+                                                <div class=" position-relative w-100 ">
+                                                    <img src="{{asset($photo->path)}}" height="252px" />
+                                                    <div class=" over-sec position-absolute text-light p-3  pointer">
+                                                        <div class="card text-center pt-4 px-1">
+                                                            <h5 class="text-center text-dark font-weight-bold">{{$service->$nameVC}}</h5>
+                                                            <p class="text-dark ">{!! $service->$descVC !!}</p>
+                                                            <div class=" d-block mt-1 pb-4">
+                                                                <a href="{{url('services')}}" class="btn fourth  btn-lg  pointer   px-3">Read More</a>
+                                                            </div>
+                                                        </div>
 
-                                </div>
-                                <div class=" col-lg-3  mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/header (1).jpeg')}}" class="item">
-                                        <div class=" ">
-                                            <img src="{{asset('web/dist/img/header (1).jpeg')}}" height="250px" />
+                                                    </div>
+                                                </div>
+                                            </a>
                                         </div>
-                                    </a>
-
-                                </div>
-                                <div class=" col-lg-3  mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (10).jpg')}}" class="item">
-                                        <div class=" ">
-                                            <img src="{{asset('web/dist/img/pic (10).jpg')}}" height="250px" />
-                                        </div>
-                                    </a>
-
-                                </div>
-                                <div class=" col-lg-3 mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (7).jpg')}}" class="item">
-                                        <div class="">
-                                            <img src="{{asset('web/dist/img/pic (7).jpg')}}" height="250px" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class=" col-lg-3 mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (8).jpg')}}" class="item">
-                                        <div class="">
-                                            <img src="{{asset('web/dist/img/pic (8).jpg')}}" height="250px" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class=" col-lg-3 mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (13).jpg')}}" class="item">
-                                        <div class="">
-                                            <img src="{{asset('web/dist/img/pic (13).jpg')}}" height="250px" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class=" col-lg-3 mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (14).jpg')}}" class="item">
-                                        <div class="">
-                                            <img src="{{asset('web/dist/img/pic (14).jpg')}}" height="250px" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class=" col-lg-3  mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/header (1).jpeg')}}" class="item">
-                                        <div class=" ">
-                                            <img src="{{asset('web/dist/img/header (1).jpeg')}}" height="250px" />
-                                        </div>
-                                    </a>
-
-                                </div>
-                                <div class=" col-lg-3  mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (10).jpg')}}" class="item">
-                                        <div class=" ">
-                                            <img src="{{asset('web/dist/img/pic (10).jpg')}}" height="250px" />
-                                        </div>
-                                    </a>
-
-                                </div>
-                                <div class=" col-lg-3 mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (13).jpg')}}" class="item">
-                                        <div class="">
-                                            <img src="{{asset('web/dist/img/pic (13).jpg')}}" height="250px" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class=" col-lg-3 mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (7).jpg')}}" class="item">
-                                        <div class="">
-                                            <img src="{{asset('web/dist/img/pic (7).jpg')}}" height="250px" />
-                                        </div>
-                                    </a>
-                                </div>
-
+                                    @endforeach
+                                @endforeach
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="text-center">
-                    <a href="gallarey.html">
-                        <button class="btn btn-info    ml-lg-3 btt"> Read More</button>
-                    </a>
-                </div>
             </div>
-            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                <div class="row">
-                    <div class="col-12">
-                        <div id="lightgallery" class="text-center  pt-3 px-3 pb-0 mb-3 ">
-                            <div class="row px-0">
-                                <div class=" col-lg-3 mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (14).jpg')}}" class="item">
-                                        <div class="">
-                                            <img src="{{asset('web/dist/img/pic (14).jpg')}}" height="250px" />
+            @foreach($services as $service)
+                <div class="tab-pane fade" id="nav-{{$service->id}}" role="tabpanel" aria-labelledby="nav-{{$service->id}}-tab">
+                    <div class="row">
+                        <div class="col-12">
+                            <div id="lightgallery" class="text-center  pt-3 px-3 pb-0 mb-3 ">
+                                <div class="row px-0">
+                                    @foreach($service->photos as $photo)
+                                        <div class=" col-lg-3 mb-3 px-2 col-md-6 ">
+                                            <a href="{{asset($photo->path)}}" class="item">
+                                                <div class=" position-relative w-100 ">
+                                                    <img src="{{asset($photo->path)}}" height="252px" />
+                                                    <div class=" over-sec position-absolute text-light p-3  pointer">
+                                                        <div class="card text-center pt-4 px-1">
+                                                            <h5 class="text-center text-dark font-weight-bold">{{$service->$nameVC}}</h5>
+                                                            <p class="text-dark ">{!! $service->$descVC !!}</p>
+                                                            <div class=" d-block mt-1 pb-4">
+                                                                <a href="{{url('services')}}" class="btn fourth  btn-lg  pointer   px-3">Read More</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
                                         </div>
-                                    </a>
+                                    @endforeach
                                 </div>
-                                <div class=" col-lg-3 mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (4).jpg')}}" class="item">
-                                        <div class="   ">
-                                            <img src="{{asset('web/dist/img/pic (4).jpg')}}" height="250px" />
-                                        </div>
-                                    </a>
-
-                                </div>
-                                <div class=" col-lg-3  mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/header (1).jpeg')}}" class="item">
-                                        <div class=" ">
-                                            <img src="{{asset('web/dist/img/header (1).jpeg')}}" height="250px" />
-                                        </div>
-                                    </a>
-
-                                </div>
-                                <div class=" col-lg-3  mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (10).jpg')}}" class="item">
-                                        <div class=" ">
-                                            <img src="{{asset('web/dist/img/pic (10).jpg')}}" height="250px" />
-                                        </div>
-                                    </a>
-
-                                </div>
-                                <div class=" col-lg-3 mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (7).jpg')}}" class="item">
-                                        <div class="">
-                                            <img src="{{asset('web/dist/img/pic (7).jpg')}}" height="250px" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class=" col-lg-3 mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (8).jpg')}}" class="item">
-                                        <div class="">
-                                            <img src="{{asset('web/dist/img/pic (8).jpg')}}" height="250px" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class=" col-lg-3 mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (13).jpg')}}" class="item">
-                                        <div class="">
-                                            <img src="{{asset('web/dist/img/pic (13).jpg')}}" height="250px" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class=" col-lg-3 mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (14).jpg')}}" class="item">
-                                        <div class="">
-                                            <img src="{{asset('web/dist/img/pic (14).jpg')}}" height="250px" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class=" col-lg-3  mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/header (1).jpeg')}}" class="item">
-                                        <div class=" ">
-                                            <img src="{{asset('web/dist/img/header (1).jpeg')}}" height="250px" />
-                                        </div>
-                                    </a>
-
-                                </div>
-                                <div class=" col-lg-3  mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (10).jpg')}}" class="item">
-                                        <div class=" ">
-                                            <img src="{{asset('web/dist/img/pic (10).jpg')}}" height="250px" />
-                                        </div>
-                                    </a>
-
-                                </div>
-                                <div class=" col-lg-3 mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (13).jpg')}}" class="item">
-                                        <div class="">
-                                            <img src="{{asset('web/dist/img/pic (13).jpg')}}" height="250px" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class=" col-lg-3 mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (7).jpg')}}" class="item">
-                                        <div class="">
-                                            <img src="{{asset('web/dist/img/pic (7).jpg')}}" height="250px" />
-                                        </div>
-                                    </a>
-                                </div>
-
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="text-center">
-                    <a href="#">
-                        <button class="btn btn-info    ml-lg-3 btt"> Read More</button>
-                    </a>
-                </div>
-            </div>
-            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                <div class="row">
-                    <div class="col-12">
-                        <div id="lightgallery" class="text-center  pt-3 px-3 pb-0 mb-3 ">
-                            <div class="row px-0">
-                                <div class=" col-lg-3 mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (14).jpg')}}" class="item">
-                                        <div class="">
-                                            <img src="{{asset('web/dist/img/pic (14).jpg')}}" height="250px" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class=" col-lg-3 mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (4).jpg')}}" class="item">
-                                        <div class="   ">
-                                            <img src="{{asset('web/dist/img/pic (4).jpg')}}" height="250px" />
-                                        </div>
-                                    </a>
-
-                                </div>
-                                <div class=" col-lg-3  mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/header (1).jpeg')}}" class="item">
-                                        <div class=" ">
-                                            <img src="{{asset('web/dist/img/header (1).jpeg')}}" height="250px" />
-                                        </div>
-                                    </a>
-
-                                </div>
-                                <div class=" col-lg-3  mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (10).jpg')}}" class="item">
-                                        <div class=" ">
-                                            <img src="{{asset('web/dist/img/pic (10).jpg')}}" height="250px" />
-                                        </div>
-                                    </a>
-
-                                </div>
-                                <div class=" col-lg-3 mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (7).jpg')}}" class="item">
-                                        <div class="">
-                                            <img src="{{asset('web/dist/img/pic (7).jpg')}}" height="250px" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class=" col-lg-3 mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (8).jpg')}}" class="item">
-                                        <div class="">
-                                            <img src="{{asset('web/dist/img/pic (8).jpg')}}" height="250px" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class=" col-lg-3 mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (13).jpg')}}" class="item">
-                                        <div class="">
-                                            <img src="{{asset('web/dist/img/pic (13).jpg')}}" height="250px" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class=" col-lg-3 mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (14).jpg')}}" class="item">
-                                        <div class="">
-                                            <img src="{{asset('web/dist/img/pic (14).jpg')}}" height="250px" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class=" col-lg-3  mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/header (1).jpeg')}}" class="item">
-                                        <div class=" ">
-                                            <img src="{{asset('web/dist/img/header (1).jpeg')}}" height="250px" />
-                                        </div>
-                                    </a>
-
-                                </div>
-                                <div class=" col-lg-3  mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (10).jpg')}}" class="item">
-                                        <div class=" ">
-                                            <img src="{{asset('web/dist/img/pic (10).jpg')}}" height="250px" />
-                                        </div>
-                                    </a>
-
-                                </div>
-                                <div class=" col-lg-3 mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (13).jpg')}}" class="item">
-                                        <div class="">
-                                            <img src="{{asset('web/dist/img/pic (13).jpg')}}" height="250px" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class=" col-lg-3 mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (7).jpg')}}" class="item">
-                                        <div class="">
-                                            <img src="{{asset('web/dist/img/pic (7).jpg')}}" height="250px" />
-                                        </div>
-                                    </a>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center">
-                    <a href="#">
-                        <button class="btn btn-info    ml-lg-3 btt"> Read More</button>
-                    </a>
-                </div>
-            </div>
-            <div class="tab-pane fade" id="nav-contact_us" role="tabpanel" aria-labelledby="nav-contact_us-tab">
-                <div class="row">
-                    <div class="col-12">
-                        <div id="lightgallery" class="text-center  pt-3 px-3 pb-0 mb-3 ">
-                            <div class="row px-0">
-                                <div class=" col-lg-3 mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (14).jpg')}}" class="item">
-                                        <div class="">
-                                            <img src="{{asset('web/dist/img/pic (14).jpg')}}" height="250px" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class=" col-lg-3 mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (4).jpg')}}" class="item">
-                                        <div class="   ">
-                                            <img src="{{asset('web/dist/img/pic (4).jpg')}}" height="250px" />
-                                        </div>
-                                    </a>
-
-                                </div>
-                                <div class=" col-lg-3  mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/header (1).jpeg')}}" class="item">
-                                        <div class=" ">
-                                            <img src="{{asset('web/dist/img/header (1).jpeg')}}" height="250px" />
-                                        </div>
-                                    </a>
-
-                                </div>
-                                <div class=" col-lg-3  mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (10).jpg')}}" class="item">
-                                        <div class=" ">
-                                            <img src="{{asset('web/dist/img/pic (10).jpg')}}" height="250px" />
-                                        </div>
-                                    </a>
-
-                                </div>
-                                <div class=" col-lg-3 mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (7).jpg')}}" class="item">
-                                        <div class="">
-                                            <img src="{{asset('web/dist/img/pic (7).jpg')}}" height="250px" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class=" col-lg-3 mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (8).jpg')}}" class="item">
-                                        <div class="">
-                                            <img src="{{asset('web/dist/img/pic (8).jpg')}}" height="250px" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class=" col-lg-3 mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (13).jpg')}}" class="item">
-                                        <div class="">
-                                            <img src="{{asset('web/dist/img/pic (13).jpg')}}" height="250px" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class=" col-lg-3 mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (14).jpg')}}" class="item">
-                                        <div class="">
-                                            <img src="{{asset('web/dist/img/pic (14).jpg')}}" height="250px" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class=" col-lg-3  mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/header (1).jpeg')}}" class="item">
-                                        <div class=" ">
-                                            <img src="{{asset('web/dist/img/header (1).jpeg')}}" height="250px" />
-                                        </div>
-                                    </a>
-
-                                </div>
-                                <div class=" col-lg-3  mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (10).jpg')}}" class="item">
-                                        <div class=" ">
-                                            <img src="{{asset('web/dist/img/pic (10).jpg')}}" height="250px" />
-                                        </div>
-                                    </a>
-
-                                </div>
-                                <div class=" col-lg-3 mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (13).jpg')}}" class="item">
-                                        <div class="">
-                                            <img src="{{asset('web/dist/img/pic (13).jpg')}}" height="250px" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class=" col-lg-3 mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (7).jpg')}}" class="item">
-                                        <div class="">
-                                            <img src="{{asset('web/dist/img/pic (7).jpg')}}" height="250px" />
-                                        </div>
-                                    </a>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center">
-                    <a href="#">
-                        <button class="btn btn-info    ml-lg-3 btt"> Read More</button>
-                    </a>
-                </div>
-            </div>
-            <div class="tab-pane fade" id="nav-contact_u" role="tabpanel" aria-labelledby="nav-contact_u-tab">
-                <div class="row">
-                    <div class="col-12">
-                        <div id="lightgallery" class="text-center  pt-3 px-3 pb-0 mb-3 ">
-                            <div class="row px-0">
-                                <div class=" col-lg-3 mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="" class="item">
-                                        <div class="">
-                                            <img src="" height="250px" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class=" col-lg-3 mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="" class="item">
-                                        <div class="   ">
-                                            <img src="" height="250px" />
-                                        </div>
-                                    </a>
-
-                                </div>
-                                <div class=" col-lg-3  mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="" class="item">
-                                        <div class=" ">
-                                            <img src="" height="250px" />
-                                        </div>
-                                    </a>
-
-                                </div>
-                                <div class=" col-lg-3  mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="" class="item">
-                                        <div class=" ">
-                                            <img src="" height="250px" />
-                                        </div>
-                                    </a>
-
-                                </div>
-                                <div class=" col-lg-3 mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="" class="item">
-                                        <div class="">
-                                            <img src="" height="250px" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class=" col-lg-3 mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="" class="item">
-                                        <div class="">
-                                            <img src="" height="250px" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class=" col-lg-3 mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="" class="item">
-                                        <div class="">
-                                            <img src="" height="250px" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class=" col-lg-3 mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="" class="item">
-                                        <div class="">
-                                            <img src="" height="250px" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class=" col-lg-3  mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="" class="item">
-                                        <div class=" ">
-                                            <img src="" height="250px" />
-                                        </div>
-                                    </a>
-
-                                </div>
-                                <div class=" col-lg-3  mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="" class="item">
-                                        <div class=" ">
-                                            <img src="" height="250px" />
-                                        </div>
-                                    </a>
-
-                                </div>
-                                <div class=" col-lg-3 mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="" class="item">
-                                        <div class="">
-                                            <img src="" height="250px" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class=" col-lg-3 mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (7).jpg')}}" class="item">
-                                        <div class="">
-                                            <img src="{{asset('web/dist/img/pic (7).jpg')}}" height="250px" />
-                                        </div>
-                                    </a>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center">
-                    <a href="#">
-                        <button class="btn btn-info    ml-lg-3 btt"> Read More</button>
-                    </a>
-                </div>
-            </div>
-            <div class="tab-pane fade" id="nav-contact_ue" role="tabpanel" aria-labelledby="nav-contact_ue-tab">
-                <div class="row">
-                    <div class="col-12">
-                        <div id="lightgallery" class="text-center  pt-3 px-3 pb-0 mb-3 ">
-                            <div class="row px-0">
-                                <div class=" col-lg-3 mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (14).jpg')}}" class="item">
-                                        <div class="">
-                                            <img src="{{asset('web/dist/img/pic (14).jpg')}}" height="250px" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class=" col-lg-3 mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (4).jpg')}}" class="item">
-                                        <div class="   ">
-                                            <img src="{{asset('web/dist/img/pic (4).jpg')}}" height="250px" />
-                                        </div>
-                                    </a>
-
-                                </div>
-                                <div class=" col-lg-3  mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/header (1).jpeg')}}" class="item">
-                                        <div class=" ">
-                                            <img src="{{asset('web/dist/img/header (1).jpeg')}}" height="250px" />
-                                        </div>
-                                    </a>
-
-                                </div>
-                                <div class=" col-lg-3  mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (10).jpg')}}" class="item">
-                                        <div class=" ">
-                                            <img src="{{asset('web/dist/img/pic (10).jpg')}}" height="250px" />
-                                        </div>
-                                    </a>
-
-                                </div>
-                                <div class=" col-lg-3 mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (7).jpg')}}" class="item">
-                                        <div class="">
-                                            <img src="{{asset('web/dist/img/pic (7).jpg')}}" height="250px" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class=" col-lg-3 mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (8).jpg')}}" class="item">
-                                        <div class="">
-                                            <img src="{{asset('web/dist/img/pic (8).jpg')}}" height="250px" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class=" col-lg-3 mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (13).jpg')}}" class="item">
-                                        <div class="">
-                                            <img src="{{asset('web/dist/img/pic (13).jpg')}}" height="250px" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class=" col-lg-3 mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (14).jpg')}}" class="item">
-                                        <div class="">
-                                            <img src="{{asset('web/dist/img/pic (14).jpg')}}" height="250px" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class=" col-lg-3  mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/header (1).jpeg')}}" class="item">
-                                        <div class=" ">
-                                            <img src="{{asset('web/dist/img/header (1).jpeg')}}" height="250px" />
-                                        </div>
-                                    </a>
-
-                                </div>
-                                <div class=" col-lg-3  mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (10).jpg')}}" class="item">
-                                        <div class=" ">
-                                            <img src="{{asset('web/dist/img/pic (10).jpg')}}" height="250px" />
-                                        </div>
-                                    </a>
-
-                                </div>
-                                <div class=" col-lg-3 mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (13).jpg')}}" class="item">
-                                        <div class="">
-                                            <img src="{{asset('web/dist/img/pic (13).jpg')}}" height="250px" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class=" col-lg-3 mb-3 px-2 col-md-6 hvr-hang">
-                                    <a href="{{asset('web/dist/img/pic (7).jpg')}}" class="item">
-                                        <div class="">
-                                            <img src="{{asset('web/dist/img/pic (7).jpg')}}" height="250px" />
-                                        </div>
-                                    </a>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center">
-                    <a href="#">
-                        <button class="btn btn-info    ml-lg-3 btt"> Read More</button>
-                    </a>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </div>
-<div class="container-fluid p-0 m-0 mappp">
+
+<div class="container-fluid p-0 m-0 mapp">
     <div class="position-relative">
         <div class=" wheel-map dropshadow mb-4" data-lat="45.7143528" data-lng="-74.0059731" data-zoom="10">
-
         </div>
         <div class="cover-map card rounded-0  p-4">
             <div class="row">
                 <div class="col">
                     <h5 class="d-block text-white mb-4 mt-5 font-weight-bold hvr-grow-rotate">Contact Info</h5>
                     <h6 class=" d-block p-arg mr-3 text-white hvr-bob">
-                        <i class="fa fa-map-marker mt-2 pr-2 text-white"></i> Location,Mansoura,Mansoura <span class="d-block" style="padding-left: 1.6rem;">Mansoura,Mansoura</span>
+                        <i class="fa fa-map-marker mt-2 pr-2 text-white"></i> Location: {{$addressVC->$valueVC}} <span class="d-block" style="padding-left: 1.6rem;"></span>
                     </h6>
                     <h6 class=" d-block p-arg mr-3 text-white hvr-bob">
-                        <i class="fa fa-phone mt-2 rota mr-2 text-white rota"></i> +01012345678
+                        <i class="fa fa-phone mt-2 rota mr-2 text-white rota"></i> +{{$phoneVC->$valueVC}}
                     </h6>
                     <h6 class=" d-block p-arg mr-3 text-white hvr-bob">
-                        <i class="fa fa-envelope-o mt-2 pr-2 text-white"></i> moh@gmail.com
+                        <i class="fa fa-envelope-o mt-2 pr-2 text-white"></i> {{$emailVC->$valueVC}}
                     </h6>
                     <h5 class="d-block text-white my-4 text-white font-weight-bold hvr-grow-rotate">Opening Hours</h5>
                     <h6 class=" d-block p-arg mr-3 text-white hvr-bob">
-                        <i class="fa fa-clock mt-2 pr-2 text-white"></i>Sat-Thurs 7.00-6.00pm
+                        <i class="fa fa-clock mt-2 pr-2 text-white"></i>{{$workTimesVC->$valueVC}}
                     </h6>
-                    <h6 class="text-white hvr-bob" style="padding-left: 1.6rem;">Fri:Closed</h6>
+                    {{--                    <h6 class="text-white hvr-bob " style="padding-left: 1.6rem;">Fri:Closed</h6>--}}
 
                 </div>
 
@@ -905,6 +334,25 @@
 
 </div>
 @endsection
+
+@push('scripts')
+    <script>
+        $('#brand_id').change(function () {
+            var brand_id = $(this).find(':selected').val();
+            $.ajax({
+                url: "get-models",
+                dataType: 'json',
+                data: {'brand_id': brand_id},
+                success: function (result) {
+                    $('#modell_id').empty();
+                    for(var i=0;i<result.models_id.length;i++) {
+                        $('select[name="modell_id[]"]').append('<option value="' + result.models_id[i] + '">' + result.models_name[i] + '</option>');
+                    }
+                }
+            })
+        });
+    </script>
+@endpush
 
 
 

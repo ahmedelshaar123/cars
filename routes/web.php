@@ -21,8 +21,10 @@ Route::group(
     ], function () {
 
     Route::group(['namespace' => 'Web'], function () {
-        //index route
+        //index routes
         Route::get('/', 'IndexController@index');
+        Route::get('get-models', 'IndexController@getModels');
+        Route::post('repaired-car', 'IndexController@store')->name('repaired-car');
         //services route
         Route::get('services', 'ServiceController@index');
         //galleries route

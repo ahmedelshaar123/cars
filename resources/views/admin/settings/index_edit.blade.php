@@ -43,6 +43,12 @@
                                 'class'=>'form-control',
                             ]) !!}
                             <br>
+                        @elseif($setting->type == 'url')
+                            <label for="{{$setting->key}}">{{$setting->$nameVC}}</label>
+                            {!! Form::url($setting->key,$setting->$valueVC,[
+                                'class'=>'form-control',
+                            ]) !!}
+                            <br>
                         @endif
                     </div>
                 </div>

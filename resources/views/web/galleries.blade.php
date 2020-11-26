@@ -3,7 +3,7 @@
 <div class=" position-relative " style="margin-top: 120px;">
     <img src='{{asset('web/dist/img/background-breadcamp.png')}}' class=" w-100" style='min-height: 300px; object-fit: cover;' />
     <div class=" position-absolute bread-crum text-center">
-        <h3 class="  text-white d-block text-center h2 hvr-pop">Gallery</h3>
+        <h3 class="  text-white d-block text-center h2 hvr-pop">@lang('web.gallery')</h3>
 {{--        <nav aria-label="breadcrumb" class="text-center" style="display: inline-flex;background-color: transparent;">--}}
 {{--            <ol class="breadcrumb">--}}
 {{--                <li class="breadcrumb-item "><a href="index.html" class="main-color ">Home</a></li>--}}
@@ -44,7 +44,7 @@
                                                             <h5 class="text-center text-dark font-weight-bold">{{$service->$nameVC}}</h5>
                                                             <p class="text-dark ">{!! $service->$descVC !!}</p>
                                                             <div class=" d-block mt-1 pb-4">
-                                                                <a href="{{url('services')}}" class="btn fourth  btn-lg  pointer   px-3">Read More</a>
+                                                                <a href="{{url('services')}}" class="btn fourth  btn-lg  pointer   px-3">@lang('web.read_more')</a>
                                                             </div>
                                                         </div>
 
@@ -75,7 +75,7 @@
                                                                 <h5 class="text-center text-dark font-weight-bold">{{$service->$nameVC}}</h5>
                                                                 <p class="text-dark ">{!! $service->$descVC !!}</p>
                                                                 <div class=" d-block mt-1 pb-4">
-                                                                    <a href="{{url('services')}}" class="btn fourth  btn-lg  pointer   px-3">Read More</a>
+                                                                    <a href="{{url('services')}}" class="btn fourth  btn-lg  pointer   px-3">@lang('web.read_more')</a>
                                                                 </div>
                                                             </div>
                                                         </div>

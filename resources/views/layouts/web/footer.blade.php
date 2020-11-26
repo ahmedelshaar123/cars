@@ -7,7 +7,7 @@
             <div class=" ">
                 <div class="row ">
                     <div class="col-lg-6 ">
-                        <h5 class="text-white pt-2 "> ALL Rights Reserved © 2020
+                        <h5 class="text-white pt-2 "> @lang('web.all_rights_reserved') © 2020
                             <a href="# " class="main-color ">SMART LEVEL</a>
 
                         </h5>

@@ -10,27 +10,27 @@
                 <ul class="navbar-nav ml-auto">
 
                     <li class="nav-item {{request()->segment(2) == '' ? 'active' : ''}}">
-                        <a class="nav-link" href="{{url('/')}}">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="{{url('/')}}">@lang('web.home') <span class="sr-only">(current)</span></a>
                     </li>
 
                     <li class="nav-item {{request()->segment(2) == 'about' ? 'active' : ''}}">
-                        <a class="nav-link" href="{{url('about')}}">About Us</a>
+                        <a class="nav-link" href="{{url('about')}}">@lang('web.about_us')</a>
                     </li>
 
                     <li class="nav-item {{request()->segment(2) == 'services' ? 'active' : ''}}">
-                        <a class="nav-link" href="{{url('services')}}"> Services</a>
+                        <a class="nav-link" href="{{url('services')}}"> @lang('web.services')</a>
                     </li>
 
                     <li class="nav-item {{request()->segment(2) == 'galleries' ? 'active' : ''}}">
-                        <a class="nav-link" href="{{url('galleries')}}">Gallery</a>
+                        <a class="nav-link" href="{{url('galleries')}}">@lang('web.galleries')</a>
                     </li>
 
                     <li class="nav-item {{request()->segment(2) == 'testimonials' ? 'active' : ''}}">
-                        <a class="nav-link" href="{{url('testimonials')}}">Testimonial</a>
+                        <a class="nav-link" href="{{url('testimonials')}}">@lang('web.testimonials')</a>
 
                     </li>
                     <li class="nav-item {{request()->segment(2) == 'contact-us' ? 'active' : ''}}">
-                        <a class="nav-link" href="{{url('contact-us')}}">Contact Us</a>
+                        <a class="nav-link" href="{{url('contact-us')}}">@lang('web.contact_us')</a>
 
                     </li>
 {{--                    <a href="#">--}}
