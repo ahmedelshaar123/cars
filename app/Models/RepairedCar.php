@@ -17,6 +17,6 @@ class RepairedCar extends Model
 
     public function model()
     {
-        return $this->belongsTo('App\Models\Modell');
+        return $this->belongsTo('App\Models\Modell', 'modell_id');
     }
 }

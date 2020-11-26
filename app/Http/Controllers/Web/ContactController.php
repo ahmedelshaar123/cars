@@ -13,7 +13,7 @@ class ContactController extends Controller
 
     public function store(ContactRequest $request) {
         Contact::create($request->all());
-        session()->flash('success', 'سيتم مراجعة رسالتك من قبل الادارة');
+        session()->flash('success', trans('web.review_message'));
         return redirect(url('/'));
     }
 }

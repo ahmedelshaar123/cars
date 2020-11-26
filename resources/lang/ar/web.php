@@ -10,6 +10,7 @@ return [
     'contact_us' => 'اتصل بنا',
     'contact_info' => 'معلومات التواصل',
     'message' => 'الرسالة',
+    'review_message' => 'سيتم مراجعة رسالتك من قبل الادارة',
     //galleries
     'gallery' => 'معرض الصور',
     'read_more' => 'اقرأ أكثر',
@@ -44,6 +45,7 @@ return [
     'send' => 'ارسال',
     'working_times' => 'أوقات العمل',
     'what_we_do' => 'ماذا نعمل',
+    'contact_soon' => 'سيتم التواصل معك قريبا',
     //header
     'home' => 'الرئيسية',
     //footer

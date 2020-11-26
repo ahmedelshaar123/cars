@@ -63,13 +63,17 @@ return [
     'logout' => 'تسجيل الخروج',
     'lang' => 'اللغة',
     'all_rights_reserved' => 'كل الحقوق محفوظة',
+    'welcome' => 'مرحبا',
+    'search_here' => 'البحث',
+    //sweet alert
+    'added' => 'تمت الاضافة',
+    'edited' => 'تم التعديل',
     'sure' => 'هل أنت متأكد؟',
     'once_deleted' => 'بمحرد الحذف لا يمكنك استعادة العنصر',
     'success_op' => 'عملية ناجحة',
     'deleted' => 'تم الحذف بنجاح',
     'cant_del' => 'لا يمكن الحذف',
     'cancelled' => 'تم الالغاء',
-    'welcome' => 'مرحبا',
 
 
 

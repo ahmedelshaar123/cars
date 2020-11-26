@@ -192,7 +192,7 @@
                     </select>
                 </div>
                 <div class="col-lg-2 ">
-                    <select class="form-control mb-5 font-weight-bold text-black-50" id="modell_id" name="modell_id[]" >
+                    <select class="form-control mb-5 font-weight-bold text-black-50" id="modell_id" name="modell_id" >
                         <option selected disabled>@lang('web.model')</option>
                     </select>
                 </div>
@@ -346,7 +346,7 @@
                 success: function (result) {
                     $('#modell_id').empty();
                     for(var i=0;i<result.models_id.length;i++) {
-                        $('select[name="modell_id[]"]').append('<option value="' + result.models_id[i] + '">' + result.models_name[i] + '</option>');
+                        $('select[name="modell_id"]').append('<option value="' + result.models_id[i] + '">' + result.models_name[i] + '</option>');
                     }
                 }
             })

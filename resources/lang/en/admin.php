@@ -63,13 +63,17 @@ return [
   'logout' => 'Logout',
   'lang' => 'Language',
   'all_rights_reserved' => 'All Rights Reserved',
+  'welcome' => 'Welcome',
+  'search_here' => 'Search',
+  //sweet alert
+  'added' => 'Added',
+  'edited' => 'Edited',
   'sure' => 'Are You Sure?',
   'once_deleted' => 'Once Deleted, Can Not Be Retrieved',
   'success_op' => 'Successful Operation',
   'deleted' => 'Deleted',
   'cant_del' => 'Record Can Not Be Deleted',
   'cancelled' => 'Cancelled',
-  'welcome' => 'Welcome',
 
 
 

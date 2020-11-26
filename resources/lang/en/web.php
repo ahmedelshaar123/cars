@@ -10,6 +10,7 @@ return [
     'contact_us' => 'Contact Us',
     'contact_info' => 'Contact Info',
     'message' => 'Message',
+    'review_message' => 'Your Message Will Be Reviewed By Administration',
     //galleries
     'gallery' => 'Gallery',
     'read_more' => 'Read More',
@@ -44,6 +45,7 @@ return [
     'send' => 'Send',
     'working_times' => 'Working Times',
     'what_we_do' => 'What We Do',
+    'contact_soon' => 'We Will Contact You Soon',
     //header
     'home' => 'Home',
     //footer

@@ -35,7 +35,7 @@ class IndexController extends Controller
 
     public function store(RepairedCarRequest $request) {
         RepairedCar::create($request->all());
-        session()->flash('success', 'سيتم التواصل معك قريبا');
+        session()->flash('success', trans('web.contact_soon'));
         return back();
     }
 
