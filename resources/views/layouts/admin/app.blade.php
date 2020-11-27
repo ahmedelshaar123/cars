@@ -398,7 +398,7 @@
                 "ordering": false,
                 //"processing": true
                 language: {
-                    search: '{{trans('admin.search_here')}}',
+                    search: '',
                 }
             }
         );
