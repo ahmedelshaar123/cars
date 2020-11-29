@@ -174,29 +174,31 @@
         <form method="post" action="{{route('repaired-car')}}">
         @csrf
             <div class="row">
-                <div class="col-lg-3 ">
-                    <input type="text" placeholder="@lang('web.name')" class="form-control mb-5 font-weight-bold text-black-50" name="name">
-                </div>
-                <div class="col-lg-3 ">
-                    <input type="email" placeholder="@lang('web.email')" class="form-control mb-5 font-weight-bold text-black-50" name="email">
-                </div>
-                <div class="col-lg-3 ">
-                    <input type="number" placeholder="@lang('web.phone')" class="form-control mb-5 font-weight-bold text-black-50" name="phone">
-                </div>
-                <div class="col-lg-3 ">
-                    <select class="form-control mb-5 font-weight-bold text-black-50" id="brand_id" name="brand_id">
-                        <option value="" selected disabled>@lang('web.brand')</option>
-                        @foreach($brands as $brand)
-                            <option value="{{$brand->id}}">{{$brand->$nameVC}}</option>
-                        @endforeach
-                    </select>
-                </div>
-                <div class="col-lg-2 ">
+
+                    <div class="col-lg-3 ">
+                        <input type="text" placeholder="@lang('web.name')" class="form-control mb-5 font-weight-bold text-black-50" name="name">
+                    </div>
+                    <div class="col-lg-3 ">
+                        <input type="email" placeholder="@lang('web.email')" class="form-control mb-5 font-weight-bold text-black-50" name="email">
+                    </div>
+                    <div class="col-lg-3 ">
+                        <input type="number" placeholder="@lang('web.phone')" class="form-control mb-5 font-weight-bold text-black-50" name="phone">
+                    </div>
+                    <div class="col-lg-3" style="margin-top: -7px">
+                        <select class="form-control mb-5 font-weight-bold text-black-50" id="brand_id" name="brand_id">
+                            <option value="" selected disabled>@lang('web.brand')</option>
+                            @foreach($brands as $brand)
+                                <option value="{{$brand->id}}">{{$brand->$nameVC}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+
+                <div class="col-lg-3">
                     <select class="form-control mb-5 font-weight-bold text-black-50" id="modell_id" name="modell_id" >
                         <option selected disabled>@lang('web.model')</option>
                     </select>
                 </div>
-                <div class="col-lg-2 ">
+                <div class="col-lg-3 ">
                     <select class="form-control mb-5 font-weight-bold text-black-50" id="exampleFormControlSelect1" name="year">
                         <option value="" selected disabled>@lang('web.year')</option>
                         @foreach($years as $year)
@@ -213,7 +215,7 @@
                         @endforeach
                     </select>
                 </div>
-                <div class="col-lg-2">
+                <div class="col-lg-3">
                     <a href="#">
                         <button class="btn btn-info    ml-lg-3 mt-2  btn_color">@lang('web.send')</button>
                     </a>
