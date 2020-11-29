@@ -174,7 +174,6 @@
         <form method="post" action="{{route('repaired-car')}}">
         @csrf
             <div class="row">
-
                     <div class="col-lg-3 ">
                         <input type="text" placeholder="@lang('web.name')" class="form-control mb-5 font-weight-bold text-black-50" name="name">
                     </div>
