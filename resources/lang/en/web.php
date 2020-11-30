@@ -46,6 +46,7 @@ return [
     'working_times' => 'Working Times',
     'what_we_do' => 'What We Do',
     'contact_soon' => 'We Will Contact You Soon',
+    'all' => 'All',
     //header
     'home' => 'Home',
     //footer

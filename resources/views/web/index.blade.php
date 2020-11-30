@@ -229,7 +229,7 @@
         <nav class="reserve ">
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
                 <a class="nav-item nav-link active hvr-skew-forward" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
-                   aria-controls="nav-home" aria-selected="true"> All </a>
+                   aria-controls="nav-home" aria-selected="true"> @lang('web.all') </a>
                 @foreach($services as $service)
                     <a class="nav-item nav-link hvr-skew-forward" id="nav-{{$service->id}}-tab" data-toggle="tab" href="#nav-{{$service->id}}" role="tab"
                        aria-controls="nav-{{$service->id}}" aria-selected="{{$loop->first ? 'true' : 'false'}}">{{$service->$nameVC}}</a>

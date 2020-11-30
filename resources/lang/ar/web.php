@@ -46,6 +46,7 @@ return [
     'working_times' => 'أوقات العمل',
     'what_we_do' => 'ماذا نعمل',
     'contact_soon' => 'سيتم التواصل معك قريبا',
+    'all' => 'الكل',
     //header
     'home' => 'الرئيسية',
     //footer
