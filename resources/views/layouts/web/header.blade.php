@@ -1,8 +1,11 @@
 <header>
     <!-- NavBar -->
-    <nav class="navbar navvbar navbar-expand-lg py-2 py-lg-2 w-100 navbar-fixed-top fixed-top">
+    <nav @if(request()->segment(2) != '') class="navbar navvbar navbar-expand-lg py-2 py-lg-2 w-100 navbar-fixed-top fixed-top"
+         @elseif(request()->segment(2) == '') class="navv navbar navbar-expand-lg py-2 py-lg-2 w-100 navbar-fixed-top fixed-top" @endif>
         <div class="container ">
-            <a class="navbar-brand " href="#"><img src="{{asset('web/dist/img/log0o.png')}}" class=" m-0 p-0   hvr-wobble-top " width="130px" /></a>
+            <a class="navbar-brand " href="#"><img @if(request()->segment(2) != '') src="{{asset('web/dist/img/log0o.png')}}"
+               @elseif(request()->segment(2) == '') src="{{asset('web/dist/img/logo11.png')}}" @endif
+               class=" m-lg-4 p-0 hvr-wobble-top " width="130px" /></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
