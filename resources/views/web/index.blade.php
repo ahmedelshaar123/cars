@@ -171,54 +171,60 @@
         @include('layouts.partials.validation-errors')
         <h3 class="font-weight-bold text-center text-white h1 ">@lang('web.car_repair')<span class="main-color">@lang('web.details')</span></h3>
         <p class=" mb-5 d-block  text-center text-white">@lang('web.get_car_repair_at_lowest_price')</p>
-        <form method="post" action="{{route('repaired-car')}}">
-        @csrf
+        <form class="pt-5" method="post" action="{{route('repaired-car')}}">
+            @csrf
             <div class="row">
-                    <div class="col-lg-3 ">
-                        <input type="text" placeholder="@lang('web.name')" class="form-control mb-5 font-weight-bold text-black-50" name="name">
+                <div class="col-md-6">
+                    <div class="form-group mb-4">
+                        <input type="text" class=" form-control form-control-lg " id="exampleInputEmail1" placeholder="@lang('web.name')" aria-describedby="emailHelp" name="name">
                     </div>
-                    <div class="col-lg-3 ">
-                        <input type="email" placeholder="@lang('web.email')" class="form-control mb-5 font-weight-bold text-black-50" name="email">
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group mb-4">
+                        <input type="number" class="  form-control form-control-lg" id="exampleInputEmail1" placeholder="@lang('web.phone')" aria-describedby="emailHelp" name="phone">
                     </div>
-                    <div class="col-lg-3 ">
-                        <input type="number" placeholder="@lang('web.phone')" class="form-control mb-5 font-weight-bold text-black-50" name="phone">
-                    </div>
-                    <div class="col-lg-3" style="margin-top: -7px">
-                        <select class="form-control mb-5 font-weight-bold text-black-50" id="brand_id" name="brand_id">
-                            <option value="" selected disabled>@lang('web.brand')</option>
-                            @foreach($brands as $brand)
-                                <option value="{{$brand->id}}">{{$brand->$nameVC}}</option>
-                            @endforeach
-                        </select>
-                    </div>
-
-                <div class="col-lg-3">
-                    <select class="form-control mb-5 font-weight-bold text-black-50" id="modell_id" name="modell_id" >
+                </div>
+            </div>
+            <div class="form-group ">
+                <input type="email" class="  form-control form-control-lg" id="exampleInputEmail1" placeholder="@lang('web.email')" aria-describedby="emailHelp" name="email">
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <select class="form-control mb-3 font-weight-bold text-black-50" id="brand_id" name="brand_id">
+                        <option value="" selected disabled>@lang('web.brand')</option>
+                        @foreach($brands as $brand)
+                            <option value="{{$brand->id}}">{{$brand->$nameVC}}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <select class="form-control mb-3 font-weight-bold text-black-50" id="modell_id" name="modell_id">
                         <option selected disabled>@lang('web.model')</option>
                     </select>
                 </div>
-                <div class="col-lg-3 ">
-                    <select class="form-control mb-5 font-weight-bold text-black-50" id="exampleFormControlSelect1" name="year">
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <select class="form-control mb-3 font-weight-bold text-black-50" id="exampleFormControlSelect1" name="year">
                         <option value="" selected disabled>@lang('web.year')</option>
                         @foreach($years as $year)
                             <option value="{{$year->year}}">{{$year->year}}</option>
                         @endforeach
                     </select>
                 </div>
-                <div class="col-lg-3">
-                    <select class="form-control mb-5 font-weight-bold text-black-50" id="exampleFormControlSelect1" name="service_id">
-
+                <div class="col-md-6">
+                    <select class="form-control mb-3 font-weight-bold text-black-50" id="exampleFormControlSelect1" name="service_id">
                         <option value="" selected disabled>@lang('web.needed_repair')</option>
                         @foreach($services as $service)
                             <option value="{{$service->id}}">{{$service->$nameVC}}</option>
                         @endforeach
                     </select>
                 </div>
-                <div class="col-lg-3">
-                    <a href="#">
-                        <button class="btn btn-info    ml-lg-3 mt-2  btn_color">@lang('web.send')</button>
-                    </a>
-                </div>
+            </div>
+            <div class="text-center">
+                <a href="#">
+                    <button type="submit" class="btn btn-primary mt-2 btn-lg fourth text-white px-5">Send</button>
+                </a>
             </div>
         </form>
     </div>
@@ -302,37 +308,66 @@
     </div>
 </div>
 
-<div class="container-fluid p-0 m-0 mapp">
-    <div class="position-relative">
-        <div class=" wheel-map dropshadow mb-4" data-lat="45.7143528" data-lng="-74.0059731" data-zoom="10">
-        </div>
-        <div class="cover-map card rounded-0  p-4">
-            <div class="row">
-                <div class="col">
-                    <h5 class="d-block text-white mb-4 mt-5 font-weight-bold hvr-grow-rotate">@lang('web.contact_info')</h5>
-                    <h6 class=" d-block p-arg mr-3 text-white hvr-bob">
-                        <i class="fa fa-map-marker mt-2 pr-2 text-white"></i> {{$addressVC->$valueVC}} <span class="d-block" style="padding-left: 1.6rem;"></span>
-                    </h6>
-                    <h6 class=" d-block p-arg mr-3 text-white hvr-bob">
-                        <i class="fa fa-phone mt-2 rota mr-2 text-white rota"></i> +{{$phoneVC->$valueVC}}
-                    </h6>
-                    <h6 class=" d-block p-arg mr-3 text-white hvr-bob">
-                        <i class="fa fa-envelope-o mt-2 pr-2 text-white"></i> {{$emailVC->$valueVC}}
-                    </h6>
-                    <h5 class="d-block text-white my-4 text-white font-weight-bold hvr-grow-rotate">@lang('web.working_times')</h5>
-                    <h6 class=" d-block p-arg mr-3 text-white hvr-bob">
-                        <i class="fa fa-clock mt-2 pr-2 text-white"></i> {{$workTimesVC->$valueVC}}
-                    </h6>
-                    {{--                    <h6 class="text-white hvr-bob " style="padding-left: 1.6rem;">Fri:Closed</h6>--}}
-
-                </div>
-
+<div class="contact py-5">
+    @include('layouts.partials.validation-errors')
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h5 class="d-block text-black mb-4 mt-5 font-weight-bold hvr-grow-rotate">Contact Info</h5>
+                <h6 class=" d-block p-arg mr-3 text-black hvr-bob">
+                    <i class="fa fa-map-marker mt-2 pr-2 text-black"></i> {{$addressVC->$valueVC}}
+                </h6>
+                <h6 class=" d-block p-arg mr-3 text-black hvr-bob">
+                    <i class="fa fa-phone mt-2 rota mr-2 text-black "></i> +{{$phoneVC->$valueVC}}
+                </h6>
+                <h6 class=" d-block p-arg mr-3 text-black hvr-bob">
+                    <i class="fa fa-envelope-o mt-2 pr-2 text-black"></i> {{$emailVC->$valueVC}}
+                </h6>
+                <h5 class="d-block text-black mb-4 mt-5 text-black font-weight-bold hvr-grow-rotate">@lang('web.working_times')</h5>
+                <h6 class=" d-block p-arg mr-3 text-black hvr-bob">
+                    <i class="fa fa-clock mt-2 pr-2 text-black "></i> {{$workTimesVC->$valueVC}}
+                </h6>
+{{--                <h6 class="text-black hvr-bob" style="padding-left: 2rem; ">Fri:Closed</h6>--}}
             </div>
+            <div class="col-lg-6">
+                <form class="pt-5" method="post" action="{{route('contact-us')}}">
+                    @csrf
+                    <div class="form-group ">
+                        <label for="exampleInputEmail1" class="mb-2 ">@lang('web.name')</label>
+                        <input type="text" class="form-control form-control-lg " id="exampleInputEmail1" placeholder="@lang('web.name')" aria-describedby="emailHelp" name="name">
+                    </div>
 
+                    <div class="form-group ">
+                        <label for="exampleInputEmail1" class="mb-2 ">@lang('web.phone')</label>
+                        <input type="number" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="@lang('web.phone')" aria-describedby="emailHelp" name="phone">
 
+                    </div>
+                    <div class="form-group ">
+                        <label for="exampleInputEmail1" class="mb-2">@lang('web.email')</label>
+                        <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="@lang('web.email')" aria-describedby="emailHelp" name="email">
+
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="exampleInputEmail1" class="mb-2  ">@lang('web.message')</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="@lang('web.message')" rows="4" style="color: red;" name="message"></textarea>
+                    </div>
+
+                    <div>
+                        <a href="#">
+                            <button type="submit" class="btn btn-primary mt-2 btn-lg fourth text-white  px-md-5 px-4 w-100">Send</button>
+                        </a>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 
+</div>
+
+<div class="container-fluid p-0 m-0 mt-4">
+    <div class="wheel-map dropshadow mb-4" data-lat="45.7143528" data-lng="-74.0059731" data-zoom="10">
+
+    </div>
 </div>
 @endsection
 

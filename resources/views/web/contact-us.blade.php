@@ -70,36 +70,13 @@
 
 </div>
 
-<div class="container-fluid p-0 m-0 mapp">
-    <div class="position-relative">
-        <div class=" wheel-map dropshadow mb-4" data-lat="45.7143528" data-lng="-74.0059731" data-zoom="10">
-        </div>
-        <div class="cover-map card rounded-0  p-4">
-            <div class="row">
-                <div class="col">
-                    <h5 class="d-block text-white mb-4 mt-5 font-weight-bold hvr-grow-rotate">@lang('web.contact_info')</h5>
-                    <h6 class=" d-block p-arg mr-3 text-white hvr-bob">
-                        <i class="fa fa-map-marker mt-2 pr-2 text-white"></i> {{$addressVC->$valueVC}} <span class="d-block" style="padding-left: 1.6rem;"></span>
-                    </h6>
-                    <h6 class=" d-block p-arg mr-3 text-white hvr-bob">
-                        <i class="fa fa-phone mt-2 rota mr-2 text-white rota"></i> +{{$phoneVC->$valueVC}}
-                    </h6>
-                    <h6 class=" d-block p-arg mr-3 text-white hvr-bob">
-                        <i class="fa fa-envelope-o mt-2 pr-2 text-white"></i> {{$emailVC->$valueVC}}
-                    </h6>
-                    <h5 class="d-block text-white my-4 text-white font-weight-bold hvr-grow-rotate">@lang('web.working_times')</h5>
-                    <h6 class=" d-block p-arg mr-3 text-white hvr-bob">
-                        <i class="fa fa-clock mt-2 pr-2 text-white"></i>{{$workTimesVC->$valueVC}}
-                    </h6>
-{{--                    <h6 class="text-white hvr-bob " style="padding-left: 1.6rem;">Fri:Closed</h6>--}}
-
-                </div>
-
-            </div>
 
 
-        </div>
+<div class="container-fluid p-0 m-0 mt-4">
+    <div class="wheel-map dropshadow mb-4" data-lat="45.7143528" data-lng="-74.0059731" data-zoom="10">
+
     </div>
-
 </div>
+
+
 @endsection

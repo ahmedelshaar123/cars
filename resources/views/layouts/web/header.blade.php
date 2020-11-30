@@ -36,13 +36,19 @@
                         <a class="nav-link" href="{{url('contact-us')}}">@lang('web.contact_us')</a>
 
                     </li>
-{{--                    <a href="#">--}}
-{{--                        <i class="fa fa-search ml-lg-5  " style="font-size: 20px; margin-top: 2.2rem"></i>--}}
-{{--                    </a>--}}
-{{--                    <a href="#">--}}
-{{--                        <button class="btn btn-info  pt-1 pb-2   ml-lg-3 btton" data-toggle="modal" data-target="#exampleModal1"> Login</button>--}}
-{{--                    </a>--}}
-
+                    <div class="ml-lg-3" style="margin-top: 1.8rem;">
+                        @if(LaravelLocalization::getCurrentLocale() == 'ar' )
+                            <a class="text-center" rel="alternate" hreflang="en"
+                               href="{{LaravelLocalization::getLocalizedURL('en', null, [], true)}}">
+                                <img src="{{asset('web/dist/img/languag.svg')}}" alt="" class="pointer ">
+                            </a>
+                        @else
+                            <a class="text-center" rel="alternate" hreflang="ar"
+                               href="{{LaravelLocalization::getLocalizedURL('ar', null, [], true)}}">
+                                <img src="{{asset('web/dist/img/languag.svg')}}" alt="" class="pointer ">
+                            </a>
+                            @endif
+                    </div>
                 </ul>
 
             </div>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سمارت ليفيل</title>
+    <title>السيارات</title>
     <link rel="icon" type="image/png" href="{{asset('uploads/logo.png')}}"/>
     <link href="{{asset('uploads/logo.png')}}" rel="apple-touch-icon">
     <div class="text-center">
