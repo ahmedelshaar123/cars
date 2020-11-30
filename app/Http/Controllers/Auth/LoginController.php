@@ -4,8 +4,11 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
+use App\User;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
-use Illuminate\Routing\Route;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class LoginController extends Controller
 {
@@ -37,6 +40,21 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+
+    public function loginAdmin(Request $request) {
+        $admin = User::where('email', $request->email)->first();
+        if(!$admin) {
+            return back();
+        }else{
+            $password = Hash::check($request->password, $admin->password);
+            if($password) {
+                Auth::login($admin);
+                return redirect(url('admin/home'));
+            }else{
+                return back();
+            }
+        }
     }
 
     public function logout()

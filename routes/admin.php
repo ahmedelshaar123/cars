@@ -60,6 +60,7 @@ Route::group(
 });
 
 Route::get('admin/login', 'Auth\LoginController@showLoginForm');
+Route::post('admin/login', 'Auth\LoginController@loginAdmin')->name('login-admin');
 Route::get('logout', 'Auth\LoginController@logout');
 
 
