@@ -1,4 +1,5 @@
-<footer class="pt-4 pb-2 foot_er  map_with">
+<!--start footer-->
+<footer class="pt-4 pb-2 foot_er map_with">
 
     <div class=" foot_under clearfix ">
         <div class="container ">
@@ -12,7 +13,7 @@
                 <div class="col-lg-6 float-md-right text-center ">
                     <a href="# ">
                             <span class="float-md-right text-center mt-3 mt-md-0 mb-lg-2 hvr-wobble-top ">
-                                  <img src='https://www.smartlevel.sa/inspina/img/logo.png' width="170 "/>
+                                  <img src='{{asset('web/dist/img/smart-footer-logo.png')}}' width="170 "/>
                                </span>
                     </a>
                 </div>

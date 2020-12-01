@@ -40,12 +40,14 @@
                         @if(LaravelLocalization::getCurrentLocale() == 'ar' )
                             <a class="text-center" rel="alternate" hreflang="en"
                                href="{{LaravelLocalization::getLocalizedURL('en', null, [], true)}}">
-                                <img src="{{asset('web/dist/img/languag.svg')}}" alt="" class="pointer ">
+                                <img @if(request()->segment(2) != '') src="{{asset('web/dist/img/languag.svg')}}" @elseif(request()->segment(2) == '')
+                                    src="{{asset('web/dist/img/language.svg')}}" @endif  alt="" class="pointer ">
                             </a>
                         @else
                             <a class="text-center" rel="alternate" hreflang="ar"
                                href="{{LaravelLocalization::getLocalizedURL('ar', null, [], true)}}">
-                                <img src="{{asset('web/dist/img/languag.svg')}}" alt="" class="pointer ">
+                                <img @if(request()->segment(2) != '') src="{{asset('web/dist/img/languag.svg')}}" @elseif(request()->segment(2) == '')
+                                src="{{asset('web/dist/img/language.svg')}}" @endif alt="" class="pointer ">
                             </a>
                             @endif
                     </div>

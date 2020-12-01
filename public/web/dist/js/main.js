@@ -508,22 +508,3 @@ $(document).ready(() => {
         history.replaceState(null, null, newUrl);
     });
 });
-
-$(window).scroll(function() {
-    var scroll = $(window).scrollTop();
-
-    if (scroll >= 500) {
-        $(".navbar").addClass("bg-da");
-    } else {
-        $(".navbar").removeClass("bg-da");
-    }
-});
-$(window).scroll(function() {
-    var scroll = $(window).scrollTop();
-
-    if (scroll >= 100) {
-        $(".navvbar").addClass("bg-whit");
-    } else {
-        $(".navvbar").removeClass("bg-whit");
-    }
-});
