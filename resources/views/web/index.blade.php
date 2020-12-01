@@ -38,10 +38,9 @@
 
             <span class="sr-only">@lang('web.next')</span>
         </a>
-
-
     </div>
 </div>
+@include('layouts.partials.validation-errors')
 <div class="car_1 py-5 mt-5">
     <div class="container">
         <h3 class="font-weight-bold text-center">@lang('web.about_us')</h3>
@@ -168,7 +167,6 @@
 </div>
 <div class="car-5 py-5 my-5">
     <div class="container">
-        @include('layouts.partials.validation-errors')
         <h3 class="font-weight-bold text-center text-white h1 ">@lang('web.car_repair')<span class="main-color">@lang('web.details')</span></h3>
         <p class=" mb-5 d-block  text-center text-white">@lang('web.get_car_repair_at_lowest_price')</p>
         <form class="pt-5" method="post" action="{{route('repaired-car')}}">
@@ -310,7 +308,6 @@
 
 <div class="form_contact mt-5 ">
     <div class="container">
-        @include('layouts.partials.validation-errors')
         <div class="row">
             <div class="col-md-6 offset-lg-3 m-auto">
                 <form method="post" action="{{route('contact-us')}}" class="card p-5 border-0">
