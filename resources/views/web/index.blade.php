@@ -173,23 +173,26 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group mb-4">
-                        <input type="text" class=" form-control form-control-lg " id="exampleInputEmail1" placeholder="@lang('web.name')" aria-describedby="emailHelp" name="name">
-                        <br>
-                        <div class="alert-danger">{{$errors->first('name')}}</div>
+                        <input type="text" class="form-control form-control-lg @error('name') is-invalid @enderror" id="exampleInputEmail1" placeholder="@lang('web.name')" aria-describedby="emailHelp" name="name">
+                        @error('name')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group mb-4">
-                        <input type="number" class="  form-control form-control-lg" id="exampleInputEmail1" placeholder="@lang('web.phone')" aria-describedby="emailHelp" name="phone">
-                        <br>
-                        <div class="alert-danger">{{$errors->first('phone')}}</div>
+                        <input type="number" class="form-control form-control-lg @error('phone') is-invalid @enderror" id="exampleInputEmail1" placeholder="@lang('web.phone')" aria-describedby="emailHelp" name="phone">
+                        @error('phone')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                     </div>
                 </div>
             </div>
             <div class="form-group ">
-                <input type="email" class="  form-control form-control-lg" id="exampleInputEmail1" placeholder="@lang('web.email')" aria-describedby="emailHelp" name="email">
-                <br>
-                <div class="alert-danger">{{$errors->first('email')}}</div>
+                <input type="email" class="  form-control form-control-lg @error('email') is-invalid @enderror" id="exampleInputEmail1" placeholder="@lang('web.email')" aria-describedby="emailHelp" name="email">
+                @error('email')
+                <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </div>
             <div class="row">
                 <div class="col-md-6">
@@ -199,7 +202,25 @@
                             <option value="{{$brand->id}}">{{$brand->$nameVC}}</option>
                         @endforeach
                     </select>
+                    @if ($errors->has('brand_id'))
+                        <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $errors->first('brand_id') }}</strong>
+                                </span>
+                    @endif
                 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
                 <div class="col-md-6">
                     <select class="form-control mb-3 font-weight-bold text-black-50" id="modell_id" name="modell_id">
                         <option selected disabled>@lang('web.model')</option>
@@ -320,39 +341,43 @@
                     <h3 class="text-center font-weight-bold d-block">@lang('web.contact_us')</h3>
                     <p class=" mb-5 d-block font-weight-bold  position-relative under-line text-center main-color">@lang('web.contact_us')</p>
                     <div class="form-group ">
-                        <label for="exampleInputEmail1" class="mb-2 "@lang('web.name')</label>
+                        <label for="exampleInputEmail1" class="mb-2 @error('name') is-invalid @enderror"@lang('web.name')</label>
                         <input type="text" class=" form-control form-control-lg " id="exampleInputEmail1" placeholder="@lang('web.name')" aria-describedby="emailHelp" name="name">
-                        <br>
-                        <div class="alert-danger">{{$errors->first('name')}}</div>
+                        @error('name')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                     </div>
 
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group ">
-                                <label for="exampleInputEmail1" class="mb-2 ">@lang('web.phone')</label>
+                                <label for="exampleInputEmail1" class="mb-2 @error('phone') is-invalid @enderror">@lang('web.phone')</label>
                                 <input type="number" class="  form-control form-control-lg" id="exampleInputEmail1" placeholder="@lang('web.phone')" aria-describedby="emailHelp" name="phone">
-                                <br>
-                                <div class="alert-danger">{{$errors->first('phone')}}</div>
+                                @error('phone')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror
 
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div>
-                                <div class="form-group ">
-                                    <label for="exampleInputEmail1" class="mb-2">@lang('web.email')</label>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1" class="mb-2 @error('email') is-invalid @enderror">@lang('web.email')</label>
                                     <input type="email" class="  form-control form-control-lg" id="exampleInputEmail1" placeholder="@lang('web.email')" aria-describedby="emailHelp" name="email">
-                                    <br>
-                                    <div class="alert-danger">{{$errors->first('email')}}</div>
+                                    @error('email')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="form-group mt-3">
-                        <label for="exampleInputEmail1" class="mb-2 ">@lang('web.message')</label>
+                        <label for="exampleInputEmail1" class="mb-2 @error('message') is-invalid @enderror">@lang('web.message')</label>
                         <textarea class=" form-control" id="exampleFormControlTextarea1" rows="4" placeholder="@lang('web.message')" name="message"></textarea>
-                        <br>
-                        <div class="alert-danger">{{$errors->first('message')}}</div>
+                        @error('message')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="text-center">
                         <a href="#">
