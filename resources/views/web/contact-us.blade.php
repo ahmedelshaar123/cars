@@ -15,7 +15,6 @@
 
 </div>
 <div class="contact py-5">
-    @include('layouts.partials.validation-errors')
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
@@ -41,25 +40,30 @@
                     <div class="form-group ">
                         <label for="exampleInputEmail1" class="mb-2 ">@lang('web.name')</label>
                         <input type="text" class="form-control form-control-lg " id="exampleInputEmail1" placeholder="@lang('web.name')" aria-describedby="emailHelp" name="name">
+                        <br>
+                        <div class="alert-danger">{{$errors->first('name')}}</div>
                     </div>
-
                     <div class="form-group ">
                         <label for="exampleInputEmail1" class="mb-2 ">@lang('web.phone')</label>
                         <input type="number" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="@lang('web.phone')" aria-describedby="emailHelp" name="phone">
-
+                        <br>
+                        <div class="alert-danger">{{$errors->first('phone')}}</div>
                     </div>
                     <div class="form-group ">
                         <label for="exampleInputEmail1" class="mb-2">@lang('web.email')</label>
                         <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="@lang('web.email')" aria-describedby="emailHelp" name="email">
-
+                        <br>
+                        <div class="alert-danger">{{$errors->first('email')}}</div>
                     </div>
                     <div class="form-group mt-3">
                         <label for="exampleInputEmail1" class="mb-2  ">@lang('web.message')</label>
                         <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="@lang('web.message')" rows="4" style="color: red;" name="message"></textarea>
+                        <br>
+                        <div class="alert-danger">{{$errors->first('message')}}</div>
                     </div>
 
                     <div>
-                        <a href="#">
+                        <a href="">
                             <button type="submit" class="btn btn-primary mt-2 btn-lg fourth text-white  px-md-5 px-4 w-100">@lang('web.send')</button>
                         </a>
                     </div>
@@ -80,3 +84,5 @@
 
 
 @endsection
+
+

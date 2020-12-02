@@ -40,7 +40,6 @@
         </a>
     </div>
 </div>
-@include('layouts.partials.validation-errors')
 <div class="car_1 py-5 mt-5">
     <div class="container">
         <h3 class="font-weight-bold text-center">@lang('web.about_us')</h3>
@@ -175,16 +174,22 @@
                 <div class="col-md-6">
                     <div class="form-group mb-4">
                         <input type="text" class=" form-control form-control-lg " id="exampleInputEmail1" placeholder="@lang('web.name')" aria-describedby="emailHelp" name="name">
+                        <br>
+                        <div class="alert-danger">{{$errors->first('name')}}</div>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group mb-4">
                         <input type="number" class="  form-control form-control-lg" id="exampleInputEmail1" placeholder="@lang('web.phone')" aria-describedby="emailHelp" name="phone">
+                        <br>
+                        <div class="alert-danger">{{$errors->first('phone')}}</div>
                     </div>
                 </div>
             </div>
             <div class="form-group ">
                 <input type="email" class="  form-control form-control-lg" id="exampleInputEmail1" placeholder="@lang('web.email')" aria-describedby="emailHelp" name="email">
+                <br>
+                <div class="alert-danger">{{$errors->first('email')}}</div>
             </div>
             <div class="row">
                 <div class="col-md-6">
@@ -317,6 +322,8 @@
                     <div class="form-group ">
                         <label for="exampleInputEmail1" class="mb-2 "@lang('web.name')</label>
                         <input type="text" class=" form-control form-control-lg " id="exampleInputEmail1" placeholder="@lang('web.name')" aria-describedby="emailHelp" name="name">
+                        <br>
+                        <div class="alert-danger">{{$errors->first('name')}}</div>
                     </div>
 
                     <div class="row">
@@ -324,6 +331,8 @@
                             <div class="form-group ">
                                 <label for="exampleInputEmail1" class="mb-2 ">@lang('web.phone')</label>
                                 <input type="number" class="  form-control form-control-lg" id="exampleInputEmail1" placeholder="@lang('web.phone')" aria-describedby="emailHelp" name="phone">
+                                <br>
+                                <div class="alert-danger">{{$errors->first('phone')}}</div>
 
                             </div>
                         </div>
@@ -332,6 +341,8 @@
                                 <div class="form-group ">
                                     <label for="exampleInputEmail1" class="mb-2">@lang('web.email')</label>
                                     <input type="email" class="  form-control form-control-lg" id="exampleInputEmail1" placeholder="@lang('web.email')" aria-describedby="emailHelp" name="email">
+                                    <br>
+                                    <div class="alert-danger">{{$errors->first('email')}}</div>
                                 </div>
                             </div>
                         </div>
@@ -340,6 +351,8 @@
                     <div class="form-group mt-3">
                         <label for="exampleInputEmail1" class="mb-2 ">@lang('web.message')</label>
                         <textarea class=" form-control" id="exampleFormControlTextarea1" rows="4" placeholder="@lang('web.message')" name="message"></textarea>
+                        <br>
+                        <div class="alert-danger">{{$errors->first('message')}}</div>
                     </div>
                     <div class="text-center">
                         <a href="#">
