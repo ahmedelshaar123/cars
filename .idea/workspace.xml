@@ -21,8 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="befd4eae-1f08-4bde-b6d2-011f2a56d0eb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/web/contact-us.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/web/contact-us.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/web/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/web/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin/app.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +160,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/lang/ar" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../new-real-estate" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -215,7 +214,15 @@
       <workItem from="1606736390536" duration="11088000" />
       <workItem from="1606810622912" duration="4756000" />
       <workItem from="1606855985292" duration="621000" />
-      <workItem from="1606901981619" duration="12312000" />
+      <workItem from="1606901981619" duration="12577000" />
+      <workItem from="1606986540387" duration="4813000" />
+      <workItem from="1606997907489" duration="603000" />
+      <workItem from="1607248213653" duration="824000" />
+      <workItem from="1607250330901" duration="191000" />
+      <workItem from="1607597109703" duration="500000" />
+      <workItem from="1607603117379" duration="727000" />
+      <workItem from="1607865447033" duration="1123000" />
+      <workItem from="1607870450414" duration="1028000" />
     </task>
     <servers />
   </component>
@@ -239,6 +246,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="370" y="95" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.680@0.0.1280.680" timestamp="1606725289259" />
+    <state x="420" y="95" key="FileChooserDialogImpl" timestamp="1607603902358">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="420" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1607603902358" />
     <state x="232" y="73" key="Vcs.Push.Dialog.v2" timestamp="1606293175066">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

@@ -341,7 +341,7 @@
                     <h3 class="text-center font-weight-bold d-block">@lang('web.contact_us')</h3>
                     <p class=" mb-5 d-block font-weight-bold  position-relative under-line text-center main-color">@lang('web.contact_us')</p>
                     <div class="form-group ">
-                        <label for="exampleInputEmail1" class="mb-2 @error('name') is-invalid @enderror"@lang('web.name')</label>
+                        <label for="exampleInputEmail1" class="mb-2 w-100 @error('name') is-invalid @enderror"@lang('web.name')</label>
                         <input type="text" class=" form-control form-control-lg " id="exampleInputEmail1" placeholder="@lang('web.name')" aria-describedby="emailHelp" name="name">
                         @error('name')
                         <div class="alert alert-danger">{{ $message }}</div>

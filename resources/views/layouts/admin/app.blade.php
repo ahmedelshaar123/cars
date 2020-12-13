@@ -228,7 +228,7 @@
                 </div>
             </div>
             <div class="footer">
-                <img src="https://www.smartlevel.sa/inspina/img/logo.png" alt="" style="width: 100px" height="100px">
+{{--                <img src="https://www.smartlevel.sa/inspina/img/logo.png" alt="" style="width: 10px" height="10px">--}}
                 <div>
                     <strong>&copy;</strong>{{trans('admin.all_rights_reserved')}}
                 </div>
