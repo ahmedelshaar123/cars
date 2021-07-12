@@ -7,6 +7,12 @@ use App\Models\StaticPage;
 
 class StaticPageController extends Controller
 {
+    function __construct()
+    {
+        $this->middleware('permission:role-list|role-edit', ['only' => ['index']]);
+        $this->middleware('permission:role-edit', ['only' => ['edit','update']]);
+    }
+
     public function index(){
         $staticPages = StaticPage::all();
         return view('admin.static pages.index_edit', compact('staticPages'));

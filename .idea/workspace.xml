@@ -20,9 +20,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="befd4eae-1f08-4bde-b6d2-011f2a56d0eb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/roles/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/roles/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/roles/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/roles/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/BrandController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/BrandController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ContactController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/RepairedCarController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/RepairedCarController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/RepairedCarStatusController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/RepairedCarStatusController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/RoleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/RoleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ServiceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ServiceController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/SettingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/SettingController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/SliderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/SliderController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/YearController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/YearController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ar/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/users/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/users/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/show.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -163,7 +181,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/roles" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -175,11 +193,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\cars\resources\views\admin\roles" />
       <recent name="C:\xampp\htdocs\cars\resources\lang\ar" />
       <recent name="C:\xampp\htdocs\cars\resources\lang" />
       <recent name="C:\xampp\htdocs\cars\public\uploads" />
       <recent name="C:\xampp\htdocs\cars\resources\views\admin" />
-      <recent name="C:\xampp\htdocs\cars\resources\views\admin\sliders" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\cars\app\Http\Controllers\Admin" />
@@ -231,7 +249,7 @@
       <workItem from="1610222904545" duration="17000" />
       <workItem from="1613154562026" duration="35000" />
       <workItem from="1626015314086" duration="3334000" />
-      <workItem from="1626090902870" duration="5813000" />
+      <workItem from="1626090902870" duration="11525000" />
     </task>
     <servers />
   </component>

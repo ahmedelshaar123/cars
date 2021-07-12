@@ -13,6 +13,12 @@ class RepairedCarController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    function __construct()
+    {
+        $this->middleware('permission:repaired-car-list', ['only' => ['index']]);
+    }
+
     public function index()
     {
         $repairedCars = RepairedCar::all();

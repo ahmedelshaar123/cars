@@ -10,6 +10,13 @@ use Mcamara\LaravelLocalization\LaravelLocalization;
 
 class ModelController extends Controller
 {
+    function __construct()
+    {
+        $this->middleware('permission:model-list|model-create|model-edit|model-delete', ['only' => ['index']]);
+        $this->middleware('permission:model-create', ['only' => ['create','store']]);
+        $this->middleware('permission:model-edit', ['only' => ['edit','update']]);
+        $this->middleware('permission:model-delete', ['only' => ['destroy']]);
+    }
 
     /**
      * Display a listing of the resource.

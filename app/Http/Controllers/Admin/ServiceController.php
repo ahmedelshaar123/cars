@@ -13,6 +13,14 @@ class ServiceController extends Controller
      *
      * @return Response
      */
+    function __construct()
+    {
+        $this->middleware('permission:service-list|service-create|service-edit|service-delete', ['only' => ['index']]);
+        $this->middleware('permission:service-create', ['only' => ['create','store']]);
+        $this->middleware('permission:service-edit', ['only' => ['edit','update']]);
+        $this->middleware('permission:service-delete', ['only' => ['destroy']]);
+    }
+
     public function index()
     {
         $services = Service::all();

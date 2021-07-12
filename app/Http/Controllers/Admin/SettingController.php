@@ -7,6 +7,12 @@ use Illuminate\Routing\Controller;
 
 class SettingController extends Controller
 {
+    function __construct()
+    {
+        $this->middleware('permission:role-list|role-edit', ['only' => ['index']]);
+        $this->middleware('permission:role-edit', ['only' => ['edit','update']]);
+    }
+
     public function index(){
         $settings = Setting::where('type', '!=', 'map')->get();
         $lat = Setting::where('key', 'lat')->first();

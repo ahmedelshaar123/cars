@@ -76,9 +76,12 @@ return [
     'cancelled' => 'تم الالغاء',
     'users' => 'المستخدمين',
     'roles' => 'الصلاحيات',
+    'role' => 'الصلاحية',
     'password' => 'كلمة المرور',
     'password_confirmation' => 'تأكيد كلمة المرور',
     'user' => 'المستخدم',
+    'show' => 'عرض',
+    'permissions' => 'الأذونات',
 
 
 

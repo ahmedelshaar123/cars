@@ -76,9 +76,12 @@ return [
   'cancelled' => 'Cancelled',
   'users' => 'Users',
   'roles' => 'Roles',
+  'role' => 'Role',
   'password' => 'Password',
   'password_confirmation' => 'Password Confirmation',
   'user' => 'User',
+  'show' => 'Show',
+  'permissions' => 'Permissions',
 
 
 

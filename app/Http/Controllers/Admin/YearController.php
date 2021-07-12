@@ -14,6 +14,14 @@ class YearController extends Controller
    *
    * @return Response
    */
+    function __construct()
+    {
+        $this->middleware('permission:year-list|year-create|year-edit|year-delete', ['only' => ['index']]);
+        $this->middleware('permission:year-create', ['only' => ['create','store']]);
+        $this->middleware('permission:year-edit', ['only' => ['edit','update']]);
+        $this->middleware('permission:year-delete', ['only' => ['destroy']]);
+    }
+
   public function index()
   {
       $years = Year::all();

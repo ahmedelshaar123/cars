@@ -13,6 +13,12 @@ class ContactController extends Controller
    *
    * @return Response
    */
+
+    function __construct()
+    {
+        $this->middleware('permission:contact-delete', ['only' => ['destroy']]);
+    }
+
   public function index()
   {
       $contacts = Contact::all();

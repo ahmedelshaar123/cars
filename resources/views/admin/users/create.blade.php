@@ -40,6 +40,7 @@
 
                 ]) !!}
                 <br>
+                <label for="roles[]">{{trans("admin.roles")}}</label>
                 <select multiple name="roles[]" class="form-control">
                     @foreach($roles as $role)
                         <option value="{{$role->id}}">{{$role->name}}</option>

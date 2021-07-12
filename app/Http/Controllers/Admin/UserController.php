@@ -80,8 +80,8 @@ class UserController extends Controller
     {
         $user = User::findOrFail($id);
         $roles = Role::all();
-        $userRole = $user->roles->get();
-        return view('admin.users.edit',compact('user','roles','userRole'));
+        $userRoles = $user->getRoleNames()->toArray();
+        return view('admin.users.edit',compact('user','roles','userRoles'));
     }
 
     /**
@@ -97,7 +97,7 @@ class UserController extends Controller
             'name' => 'required|min:2|max:25',
             'email' => 'required|email|unique:users,email,'.$id,
             'password' => 'nullable|min:6|confirmed',
-            'role' => 'required'
+            'roles' => 'required'
         ]);
 
         $input = $request->all();
@@ -110,7 +110,7 @@ class UserController extends Controller
         $user = User::findOrFail($id);
         $user->update($input);
         DB::table('model_has_roles')->where('model_id',$id)->delete();
-        $user->assignRole($request->input('role'));
+        $user->assignRole($request->input('roles'));
         session()->flash('key', trans('admin.edited'));
         return redirect()->route('users.index');
     }

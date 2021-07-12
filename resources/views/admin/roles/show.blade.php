@@ -1,6 +1,6 @@
 @extends('layouts.admin.app',[
             'page_header'       => trans('admin.site'),
-            'page_description'       => trans('admin.user'),
+            'page_description'       => trans('admin.role'),
 
                                 ])
 @section('content')
@@ -11,15 +11,13 @@
                 <table class="data-table table table-bordered" id="table1">
                     <thead>
                     <th class="text-center">{{trans('admin.name')}}</th>
-                    <th class="text-center">{{trans('admin.email')}}</th>
-                    <th class="text-center">{{trans('admin.roles')}}</th>
+                    <th class="text-center">{{trans('admin.permissions')}}</th>
                     </thead>
                     <tbody>
-                        <tr id="removable{{$user->id}}">
-                            <td class="text-center">{{$user->name}}</td>
-                            <td class="text-center">{{$user->email}}</td>
-                            @foreach($user->getRoleNames() as $role)
-                                <td class="text-center">{{$role}}</td>
+                        <tr id="removable{{$role->id}}">
+                            <td class="text-center">{{$role->name}}</td>
+                            @foreach($rolePermissions as  $rolePermission)
+                                <td class="text-center">{{$rolePermission->name}}</td>
                             @endforeach
                         </tr>
                     </tbody>
