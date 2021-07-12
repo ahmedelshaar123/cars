@@ -47,12 +47,12 @@ class UserController extends Controller
             'name' => 'required|min:2|max:25',
             'email' => 'required|email|unique:users,email',
             'password' => 'required|min:6|confirmed',
-            'role' => 'required'
+            'roles' => 'required'
         ]);
         $input = $request->all();
         $input['password'] = Hash::make($input['password']);
         $user = User::create($input);
-        $user->assignRole($request->input('role'));
+        $user->assignRole($request->input('roles'));
         session()->flash('key', trans('admin.added'));
         return redirect()->route('users.index');
 

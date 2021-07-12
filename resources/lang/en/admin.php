@@ -78,6 +78,7 @@ return [
   'roles' => 'Roles',
   'password' => 'Password',
   'password_confirmation' => 'Password Confirmation',
+  'user' => 'User',
 
 
 

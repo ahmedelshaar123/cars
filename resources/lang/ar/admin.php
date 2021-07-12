@@ -78,6 +78,7 @@ return [
     'roles' => 'الصلاحيات',
     'password' => 'كلمة المرور',
     'password_confirmation' => 'تأكيد كلمة المرور',
+    'user' => 'المستخدم',
 
 
 
