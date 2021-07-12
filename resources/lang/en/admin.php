@@ -74,6 +74,10 @@ return [
   'deleted' => 'Deleted',
   'cant_del' => 'Record Can Not Be Deleted',
   'cancelled' => 'Cancelled',
+  'users' => 'Users',
+  'roles' => 'Roles',
+  'password' => 'Password',
+  'password_confirmation' => 'Password Confirmation',
 
 
 

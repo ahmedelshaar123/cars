@@ -130,11 +130,25 @@
                             <span class="nav-label">{{trans('admin.repaired_cars')}}</span>
                         </a>
                     </li>
-                    {{--            static pages--}}
+                {{--            repaired cars--}}
+                <li>
+                    <a href="{{url('admin/repaired-cars')}}">
+                        <i class="fa fa-car" aria-hidden="true"></i>
+                        <span class="nav-label">{{trans('admin.repaired_cars')}}</span>
+                    </a>
+                </li>
+                {{--           users--}}
+                <li>
+                    <a href="{{url('admin/users')}}">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <span class="nav-label">{{trans('admin.users')}}</span>
+                    </a>
+                </li>
+                    {{--            roles--}}
                     <li>
-                        <a href="{{url('admin/static-pages')}}">
-                            <i class="fa fa-paper-plane-o"></i>
-                            <span class="nav-label">{{trans('admin.static_pages')}}</span>
+                        <a href="{{url('admin/roles')}}">
+                            <i class="fa fa-hand-grab-o"></i>
+                            <span class="nav-label">{{trans('admin.roles')}}</span>
                         </a>
                     </li>
                     {{--            settings--}}

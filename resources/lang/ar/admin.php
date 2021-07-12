@@ -74,6 +74,10 @@ return [
     'deleted' => 'تم الحذف بنجاح',
     'cant_del' => 'لا يمكن الحذف',
     'cancelled' => 'تم الالغاء',
+    'users' => 'المستخدمين',
+    'roles' => 'الصلاحيات',
+    'password' => 'كلمة المرور',
+    'password_confirmation' => 'تأكيد كلمة المرور',
 
 
 

@@ -31,6 +31,10 @@ Route::group(
         Route::group(['middleware' => 'auth'], function () {
             //home route
             Route::get('home', 'HomeController@index');
+            //roles route
+            Route::resource('roles', 'RoleController');
+            //users route
+            Route::resource('users', 'UserController');
             //contacts route
             Route::resource('contacts', 'ContactController');
             //years route
