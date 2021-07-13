@@ -9,8 +9,8 @@ class SettingController extends Controller
 {
     function __construct()
     {
-        $this->middleware('permission:role-list|role-edit', ['only' => ['index']]);
-        $this->middleware('permission:role-edit', ['only' => ['edit','update']]);
+        $this->middleware('permission:setting-list|setting-edit', ['only' => ['index']]);
+        $this->middleware('permission:setting-edit', ['only' => ['edit','update']]);
     }
 
     public function index(){

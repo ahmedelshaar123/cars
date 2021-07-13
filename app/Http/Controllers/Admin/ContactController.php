@@ -16,6 +16,7 @@ class ContactController extends Controller
 
     function __construct()
     {
+        $this->middleware('permission:contact-list|contact-delete', ['only' => ['index']]);
         $this->middleware('permission:contact-delete', ['only' => ['destroy']]);
     }
 

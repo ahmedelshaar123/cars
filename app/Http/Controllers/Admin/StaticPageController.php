@@ -9,8 +9,8 @@ class StaticPageController extends Controller
 {
     function __construct()
     {
-        $this->middleware('permission:role-list|role-edit', ['only' => ['index']]);
-        $this->middleware('permission:role-edit', ['only' => ['edit','update']]);
+        $this->middleware('permission:static-page-list|static-page-edit', ['only' => ['index']]);
+        $this->middleware('permission:static-page-edit', ['only' => ['edit','update']]);
     }
 
     public function index(){
