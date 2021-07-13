@@ -42,7 +42,7 @@
                 <label for="roles[]">{{trans("admin.roles")}}</label>
                 <select multiple name="roles[]" class="form-control">
                     @foreach($roles as $role)
-                        <option value="{{$role->id}}" @if(in_array($role->name, $userRoles) ? 'selected' : '') @endif>{{$role->name}}</option>
+                        <option value="{{$role->id}}" {{in_array($role->name, $userRoles) ? 'selected' : ''}}>{{$role->name}}</option>
                     @endforeach
                 </select>
             </div>

@@ -24,7 +24,7 @@
                 <label for="permissions[]">{{trans("admin.permissions")}}</label>
                 <select multiple name="permissions[]" class="form-control">
                     @foreach($permissions as $permission)
-                        <option value="{{$permission->id}}">{{$permission->name}}</option>
+                        <option {{in_array($permission->id, $rolePermissions) ? 'selected' : ''}} value="{{$permission->id}}">{{$permission->name}}</option>
                     @endforeach
                 </select>
             </div>
