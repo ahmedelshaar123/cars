@@ -16,7 +16,7 @@
                     <tbody>
                         <tr id="removable{{$role->id}}">
                             <td class="text-center">{{$role->name}}</td>
-                            <td class="text-center">@foreach($rolePermissions as  $rolePermission){{$rolePermission->name}} @endforeach</td>
+                            <td class="text-center">@foreach($rolePermissions as  $rolePermission) {{$rolePermission->name}} @endforeach</td>
                         </tr>
                     </tbody>
                 </table>

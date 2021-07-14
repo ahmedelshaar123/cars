@@ -87,7 +87,8 @@ class RoleController extends Controller
     {
         $role = Role::findOrFail($id);
         $permissions = Permission::all();
-        $rolePermissions = DB::table("role_has_permissions")->where("role_has_permissions.role_id",$id)->pluck('permission_id')->toArray();
+        $rolePermissions = DB::table("role_has_permissions")->where("role_has_permissions.role_id",$id)
+                ->pluck('permission_id')->toArray();
         return view('admin.roles.edit',compact('role','permissions','rolePermissions'));
     }
 
