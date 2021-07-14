@@ -16,7 +16,7 @@
         <div class="box-body">
             <div class="form-group">
                 <label for="name">{{trans("admin.name")}}</label>
-                {!! Form::text("name",null,[
+                {!! Form::text("name",$role->name,[
                     'class'=>'form-control',
 
                 ]) !!}
