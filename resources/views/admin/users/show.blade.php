@@ -18,7 +18,7 @@
                         <tr id="removable{{$user->id}}">
                             <td class="text-center">{{$user->name}}</td>
                             <td class="text-center">{{$user->email}}</td>
-                            <td class="text-center">@foreach($user->getRoleNames() as $role){{$role}} @endforeach</td>
+                            <td class="text-center">@foreach($user->getRoleNames() as $role) {{$role}} @endforeach</td>
                         </tr>
                     </tbody>
                 </table>
