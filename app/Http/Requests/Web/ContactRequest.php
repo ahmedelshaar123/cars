@@ -28,6 +28,7 @@ class ContactRequest extends FormRequest
             'email' => 'required|email',
             'phone' => 'required|digits_between:10,12',
             'message' => 'required',
+            'captcha' => 'required|captcha'
         ];
     }
 }

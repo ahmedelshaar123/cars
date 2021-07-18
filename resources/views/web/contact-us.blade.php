@@ -32,7 +32,7 @@
                 <h6 class=" d-block p-arg mr-3 text-black hvr-bob">
                     <i class="fa fa-clock mt-2 pr-2 text-black "></i> {{$workTimesVC->$valueVC}}
                 </h6>
-{{--                <h6 class="text-black hvr-bob" style="padding-left: 2rem; ">Fri:Closed</h6>--}}
+                <h6 class="text-black hvr-bob" style="padding-left: 2rem; ">Fri:Closed</h6>
             </div>
             <div class="col-lg-6">
                 <form class="pt-5" method="post" action="{{route('contact-us')}}">
@@ -65,6 +65,21 @@
                         <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
                     </div>
+                    <div class="form-group mt-3 mb-3">
+                        <div class="captcha">
+                            <span>{!! captcha_img() !!}</span>
+                            <button type="button" class="btn btn-danger" class="refresh-captcha" id="refresh-captcha">
+                                &#x21bb;
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-group mb-4">
+                        <input id="captcha" type="text" class="form-control" placeholder="Enter Captcha" name="captcha">
+                        @error('captcha')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
+                    </div>
 
                     <div>
                         <a href="">
@@ -88,5 +103,20 @@
 
 
 @endsection
+
+@push('scripts')
+    <script type="text/javascript">
+        $('#refresh-captcha').click(function () {
+            $.ajax({
+                type: 'GET',
+                url: 'refresh-captcha',
+                success: function (data) {
+                    $(".captcha span").html(data.captcha);
+                }
+            });
+        });
+
+    </script>
+@endpush
 
 

@@ -34,6 +34,7 @@ Route::group(
         //contacts routes
         Route::get('contact-us', 'ContactController@index');
         Route::post('contact-us', 'ContactController@store')->name('contact-us');
+        Route::get('refresh-captcha', 'ContactController@refreshCaptcha');
         //about route
         Route::get('about', 'AboutController@index');
     });

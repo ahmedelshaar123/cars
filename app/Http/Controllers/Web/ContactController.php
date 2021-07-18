@@ -19,4 +19,9 @@ class ContactController extends Controller
         session()->flash('success', trans('web.review_message'));
         return redirect(url('/'));
     }
+
+    public function refreshCaptcha()
+    {
+        return response()->json(['captcha'=> captcha_img()]);
+    }
 }

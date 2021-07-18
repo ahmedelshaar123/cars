@@ -17,6 +17,7 @@
         "laravel/ui": "2.4",
         "laravelcollective/html": "^6.2",
         "mcamara/laravel-localization": "^1.6",
+        "mews/captcha": "^3.2",
         "spatie/laravel-permission": "^4.2"
     },
     "require-dev": {
